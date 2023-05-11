@@ -4355,73 +4355,73 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PruebaLCD.c: 7: TRISD=0;
 "7
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;PruebaLCD.c: 8: LATD=0;
-"8
-[e = _LATD -> -> 0 `i `uc ]
-[; ;PruebaLCD.c: 9: _delay((unsigned long)((1000)*(1000000/4000.0)));
+[; ;PruebaLCD.c: 9: LATD=0;
 "9
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;PruebaLCD.c: 10: ConfiguraLCD(4);
+[e = _LATD -> -> 0 `i `uc ]
+[; ;PruebaLCD.c: 10: _delay((unsigned long)((1000)*(1000000/4000.0)));
 "10
-[e ( _ConfiguraLCD (1 -> -> 4 `i `uc ]
-[; ;PruebaLCD.c: 11: InicializaLCD();
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;PruebaLCD.c: 11: ConfiguraLCD(4);
 "11
-[e ( _InicializaLCD ..  ]
-[; ;PruebaLCD.c: 12: EscribeLCD_c('H');
+[e ( _ConfiguraLCD (1 -> -> 4 `i `uc ]
+[; ;PruebaLCD.c: 12: InicializaLCD();
 "12
-[e ( _EscribeLCD_c (1 -> -> 72 `ui `uc ]
-[; ;PruebaLCD.c: 13: EscribeLCD_c('o');
+[e ( _InicializaLCD ..  ]
+[; ;PruebaLCD.c: 13: EscribeLCD_c('H');
 "13
-[e ( _EscribeLCD_c (1 -> -> 111 `ui `uc ]
-[; ;PruebaLCD.c: 14: EscribeLCD_c('l');
+[e ( _EscribeLCD_c (1 -> -> 72 `ui `uc ]
+[; ;PruebaLCD.c: 14: EscribeLCD_c('o');
 "14
-[e ( _EscribeLCD_c (1 -> -> 108 `ui `uc ]
-[; ;PruebaLCD.c: 15: EscribeLCD_c('a');
-"15
-[e ( _EscribeLCD_c (1 -> -> 97 `ui `uc ]
-[; ;PruebaLCD.c: 16: EscribeLCD_c(' ');
-"16
-[e ( _EscribeLCD_c (1 -> -> 32 `ui `uc ]
-[; ;PruebaLCD.c: 17: EscribeLCD_c('M');
-"17
-[e ( _EscribeLCD_c (1 -> -> 77 `ui `uc ]
-[; ;PruebaLCD.c: 18: EscribeLCD_c('u');
-"18
-[e ( _EscribeLCD_c (1 -> -> 117 `ui `uc ]
-[; ;PruebaLCD.c: 19: EscribeLCD_c('n');
-"19
-[e ( _EscribeLCD_c (1 -> -> 110 `ui `uc ]
-[; ;PruebaLCD.c: 20: EscribeLCD_c('d');
-"20
-[e ( _EscribeLCD_c (1 -> -> 100 `ui `uc ]
-[; ;PruebaLCD.c: 21: EscribeLCD_c('o');
-"21
 [e ( _EscribeLCD_c (1 -> -> 111 `ui `uc ]
-[; ;PruebaLCD.c: 22: EscribeLCD_c('&');
+[; ;PruebaLCD.c: 15: EscribeLCD_c('l');
+"15
+[e ( _EscribeLCD_c (1 -> -> 108 `ui `uc ]
+[; ;PruebaLCD.c: 16: EscribeLCD_c('a');
+"16
+[e ( _EscribeLCD_c (1 -> -> 97 `ui `uc ]
+[; ;PruebaLCD.c: 17: EscribeLCD_c(' ');
+"17
+[e ( _EscribeLCD_c (1 -> -> 32 `ui `uc ]
+[; ;PruebaLCD.c: 18: EscribeLCD_c('M');
+"18
+[e ( _EscribeLCD_c (1 -> -> 77 `ui `uc ]
+[; ;PruebaLCD.c: 19: EscribeLCD_c('u');
+"19
+[e ( _EscribeLCD_c (1 -> -> 117 `ui `uc ]
+[; ;PruebaLCD.c: 20: EscribeLCD_c('n');
+"20
+[e ( _EscribeLCD_c (1 -> -> 110 `ui `uc ]
+[; ;PruebaLCD.c: 21: EscribeLCD_c('d');
+"21
+[e ( _EscribeLCD_c (1 -> -> 100 `ui `uc ]
+[; ;PruebaLCD.c: 22: EscribeLCD_c('o');
 "22
-[e ( _EscribeLCD_c (1 -> -> 38 `ui `uc ]
-[; ;PruebaLCD.c: 23: DireccionaLCD(0xC0);
+[e ( _EscribeLCD_c (1 -> -> 111 `ui `uc ]
+[; ;PruebaLCD.c: 23: EscribeLCD_c('&');
 "23
-[e ( _DireccionaLCD (1 -> -> 192 `i `uc ]
-[; ;PruebaLCD.c: 24: MensajeLCD_Var("Hello World");
+[e ( _EscribeLCD_c (1 -> -> 38 `ui `uc ]
+[; ;PruebaLCD.c: 24: DireccionaLCD(0xC0);
 "24
-[e ( _MensajeLCD_Var (1 -> :s 1C `*uc ]
-[; ;PruebaLCD.c: 25: EscribeLCD_n8(255,3);
+[e ( _DireccionaLCD (1 -> -> 192 `i `uc ]
+[; ;PruebaLCD.c: 25: MensajeLCD_Var("Hello World");
 "25
-[e ( _EscribeLCD_n8 (2 , -> -> 255 `i `uc -> -> 3 `i `uc ]
-[; ;PruebaLCD.c: 26: while(1){
+[e ( _MensajeLCD_Var (1 -> :s 1C `*uc ]
+[; ;PruebaLCD.c: 26: EscribeLCD_n8(255,3);
 "26
+[e ( _EscribeLCD_n8 (2 , -> -> 255 `i `uc -> -> 3 `i `uc ]
+[; ;PruebaLCD.c: 27: while(1){
+"27
 [e :U 422 ]
 {
-"27
+"28
 }
 [e :U 421 ]
-"26
+"27
 [e $U 422  ]
 [e :U 423 ]
-[; ;PruebaLCD.c: 27: }
 [; ;PruebaLCD.c: 28: }
-"28
+[; ;PruebaLCD.c: 29: }
+"29
 [e :UE 420 ]
 }
 [a 1C 72 101 108 108 111 32 87 111 114 108 100 0 ]

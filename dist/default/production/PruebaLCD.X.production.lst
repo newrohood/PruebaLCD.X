@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Wed Nov 24 16:00:55 2021
+                                                                                               Wed May 10 22:05:48 2023
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og9 
      1                           	processor	18F4550
@@ -277,11 +277,11 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og9
    263  000990  0E00               	movlw	0
    264  000992  6E95               	movwf	149,c	;volatile
    265                           
-   266                           ;PruebaLCD.c: 8: LATD=0;
+   266                           ;PruebaLCD.c: 9: LATD=0;
    267  000994  0E00               	movlw	0
    268  000996  6E8C               	movwf	140,c	;volatile
    269                           
-   270                           ;PruebaLCD.c: 9: _delay((unsigned long)((1000)*(1000000/4000.0)));
+   270                           ;PruebaLCD.c: 10: _delay((unsigned long)((1000)*(1000000/4000.0)));
    271  000998  0E02               	movlw	2
    272  00099A  6E0F               	movwf	(??_main+1)^0,c
    273  00099C  0E45               	movlw	69
@@ -295,67 +295,67 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og9
    281  0009AA  2E0F               	decfsz	(??_main+1)^0,f,c
    282  0009AC  D7FA               	bra	u197
    283                           
-   284                           ;PruebaLCD.c: 10: ConfiguraLCD(4);
+   284                           ;PruebaLCD.c: 11: ConfiguraLCD(4);
    285  0009AE  0E04               	movlw	4
    286  0009B0  ECAC  F005         	call	_ConfiguraLCD
    287                           
-   288                           ;PruebaLCD.c: 11: InicializaLCD();
+   288                           ;PruebaLCD.c: 12: InicializaLCD();
    289  0009B4  EC7A  F004         	call	_InicializaLCD	;wreg free
    290                           
-   291                           ;PruebaLCD.c: 12: EscribeLCD_c('H');
+   291                           ;PruebaLCD.c: 13: EscribeLCD_c('H');
    292  0009B8  0E48               	movlw	72
    293  0009BA  ECB8  F005         	call	_EscribeLCD_c
    294                           
-   295                           ;PruebaLCD.c: 13: EscribeLCD_c('o');
+   295                           ;PruebaLCD.c: 14: EscribeLCD_c('o');
    296  0009BE  0E6F               	movlw	111
    297  0009C0  ECB8  F005         	call	_EscribeLCD_c
    298                           
-   299                           ;PruebaLCD.c: 14: EscribeLCD_c('l');
+   299                           ;PruebaLCD.c: 15: EscribeLCD_c('l');
    300  0009C4  0E6C               	movlw	108
    301  0009C6  ECB8  F005         	call	_EscribeLCD_c
    302                           
-   303                           ;PruebaLCD.c: 15: EscribeLCD_c('a');
+   303                           ;PruebaLCD.c: 16: EscribeLCD_c('a');
    304  0009CA  0E61               	movlw	97
    305  0009CC  ECB8  F005         	call	_EscribeLCD_c
    306                           
-   307                           ;PruebaLCD.c: 16: EscribeLCD_c(' ');
+   307                           ;PruebaLCD.c: 17: EscribeLCD_c(' ');
    308  0009D0  0E20               	movlw	32
    309  0009D2  ECB8  F005         	call	_EscribeLCD_c
    310                           
-   311                           ;PruebaLCD.c: 17: EscribeLCD_c('M');
+   311                           ;PruebaLCD.c: 18: EscribeLCD_c('M');
    312  0009D6  0E4D               	movlw	77
    313  0009D8  ECB8  F005         	call	_EscribeLCD_c
    314                           
-   315                           ;PruebaLCD.c: 18: EscribeLCD_c('u');
+   315                           ;PruebaLCD.c: 19: EscribeLCD_c('u');
    316  0009DC  0E75               	movlw	117
    317  0009DE  ECB8  F005         	call	_EscribeLCD_c
    318                           
-   319                           ;PruebaLCD.c: 19: EscribeLCD_c('n');
+   319                           ;PruebaLCD.c: 20: EscribeLCD_c('n');
    320  0009E2  0E6E               	movlw	110
    321  0009E4  ECB8  F005         	call	_EscribeLCD_c
    322                           
-   323                           ;PruebaLCD.c: 20: EscribeLCD_c('d');
+   323                           ;PruebaLCD.c: 21: EscribeLCD_c('d');
    324  0009E8  0E64               	movlw	100
    325  0009EA  ECB8  F005         	call	_EscribeLCD_c
    326                           
-   327                           ;PruebaLCD.c: 21: EscribeLCD_c('o');
+   327                           ;PruebaLCD.c: 22: EscribeLCD_c('o');
    328  0009EE  0E6F               	movlw	111
    329  0009F0  ECB8  F005         	call	_EscribeLCD_c
    330                           
-   331                           ;PruebaLCD.c: 22: EscribeLCD_c('&');
+   331                           ;PruebaLCD.c: 23: EscribeLCD_c('&');
    332  0009F4  0E26               	movlw	38
    333  0009F6  ECB8  F005         	call	_EscribeLCD_c
    334                           
-   335                           ;PruebaLCD.c: 23: DireccionaLCD(0xC0);
+   335                           ;PruebaLCD.c: 24: DireccionaLCD(0xC0);
    336  0009FA  0EC0               	movlw	192
    337  0009FC  ECC3  F005         	call	_DireccionaLCD
    338                           
-   339                           ;PruebaLCD.c: 24: MensajeLCD_Var("Hello World");
+   339                           ;PruebaLCD.c: 25: MensajeLCD_Var("Hello World");
    340  000A00  0E01               	movlw	low STR_1
    341  000A02  6E06               	movwf	MensajeLCD_Var@a^0,c
    342  000A04  EC8A  F005         	call	_MensajeLCD_Var	;wreg free
    343                           
-   344                           ;PruebaLCD.c: 25: EscribeLCD_n8(255,3);
+   344                           ;PruebaLCD.c: 26: EscribeLCD_n8(255,3);
    345  000A08  0E03               	movlw	3
    346  000A0A  6E09               	movwf	EscribeLCD_n8@b^0,c
    347  000A0C  0EFF               	movlw	255
@@ -1885,7 +1885,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Wed Nov 24 16:00:55 2021
+Symbol Table                                                                                   Wed May 10 22:05:48 2023
 
                      u80 0B6A               EnviaDato@a 0004                      l121 0A12  
           _InicializaLCD 08F4                      l902 0AA2                      l880 0A18  

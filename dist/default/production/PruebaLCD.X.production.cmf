@@ -11,6 +11,10 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
+idloc IDLOC 5 200000 200000 8 1
+init CODE 0 0 0 4 1
+config CONFIG 4 300000 300000 E 1
 $dist/default/production\PruebaLCD.X.production.obj
 cinit CODE 0 B3C B3C 1C 1
 idloc IDLOC 5 200000 200000 8 1
@@ -31,10 +35,6 @@ idataCOMRAM CODE 0 BBE BBE 1 1
 cstackCOMRAM COMRAM 1 1 1 F 1
 smallconst SMALLCONST 0 800 800 E 1
 dataCOMRAM COMRAM 1 10 10 1 1
-config CONFIG 4 300000 300000 E 1
-$C:\Users\usr\AppData\Local\Temp\xcAs94.obj
-idloc IDLOC 5 200000 200000 8 1
-init CODE 0 0 0 4 1
 config CONFIG 4 300000 300000 E 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -224,41 +224,41 @@ B26 text1 CODE >238:C:\Users\usr\MPLABXProjects\PruebaLCD.X\LibLCDXC8.h
 B28 text1 CODE >236:C:\Users\usr\MPLABXProjects\PruebaLCD.X\LibLCDXC8.h
 990 text0 CODE >6:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
 990 text0 CODE >7:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-994 text0 CODE >8:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-998 text0 CODE >9:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9AE text0 CODE >10:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9B4 text0 CODE >11:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9B8 text0 CODE >12:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9BE text0 CODE >13:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9C4 text0 CODE >14:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9CA text0 CODE >15:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9D0 text0 CODE >16:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9D6 text0 CODE >17:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9DC text0 CODE >18:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9E2 text0 CODE >19:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9E8 text0 CODE >20:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9EE text0 CODE >21:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9F4 text0 CODE >22:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-9FA text0 CODE >23:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-A00 text0 CODE >24:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-A08 text0 CODE >25:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-A12 text0 CODE >26:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
-B3C cinit CODE >524:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B3C cinit CODE >526:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B3C cinit CODE >529:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B3C cinit CODE >544:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B3E cinit CODE >545:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B40 cinit CODE >546:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B42 cinit CODE >547:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B44 cinit CODE >548:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B46 cinit CODE >549:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B48 cinit CODE >550:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B4A cinit CODE >551:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B4E cinit CODE >557:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B4E cinit CODE >560:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B50 cinit CODE >561:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B52 cinit CODE >562:C:\Users\usr\AppData\Local\Temp\xcAs94.as
-B54 cinit CODE >563:C:\Users\usr\AppData\Local\Temp\xcAs94.as
+994 text0 CODE >9:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+998 text0 CODE >10:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9AE text0 CODE >11:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9B4 text0 CODE >12:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9B8 text0 CODE >13:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9BE text0 CODE >14:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9C4 text0 CODE >15:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9CA text0 CODE >16:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9D0 text0 CODE >17:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9D6 text0 CODE >18:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9DC text0 CODE >19:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9E2 text0 CODE >20:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9E8 text0 CODE >21:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9EE text0 CODE >22:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9F4 text0 CODE >23:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+9FA text0 CODE >24:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+A00 text0 CODE >25:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+A08 text0 CODE >26:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+A12 text0 CODE >27:C:\Users\usr\MPLABXProjects\PruebaLCD.X\PruebaLCD.c
+B3C cinit CODE >524:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B3C cinit CODE >526:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B3C cinit CODE >529:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B3C cinit CODE >544:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B3E cinit CODE >545:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B40 cinit CODE >546:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B42 cinit CODE >547:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B44 cinit CODE >548:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B46 cinit CODE >549:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B48 cinit CODE >550:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B4A cinit CODE >551:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B4E cinit CODE >557:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B4E cinit CODE >560:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B50 cinit CODE >561:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B52 cinit CODE >562:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
+B54 cinit CODE >563:C:\Users\usr\AppData\Local\Temp\xcAs1jc.as
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -279,16 +279,16 @@ __Hspace_1 11 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
 __Hspace_4 60000E 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\PruebaLCD.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 __end_of_EnviaDato AB0 0 CODE 0 text9 dist/default/production\PruebaLCD.X.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PruebaLCD.X.production.obj
 __size_of_EnviaDato 0 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\PruebaLCD.X.production.obj
 _LATD F8C 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+___sp 0 0 STACK 2 stack C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 _main 990 0 CODE 0 text0 dist/default/production\PruebaLCD.X.production.obj
 MensajeLCD_Var@a 6 0 COMRAM 1 cstackCOMRAM dist/default/production\PruebaLCD.X.production.obj
-start 0 0 CODE 0 init C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+start 0 0 CODE 0 init C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
 __size_of___lbdiv 0 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
 __size_of___lbmod 0 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
@@ -297,18 +297,18 @@ _EnviaDato A6A 0 CODE 0 text9 dist/default/production\PruebaLCD.X.production.obj
 _EscribeLCD_n8 80E 0 CODE 0 text5 dist/default/production\PruebaLCD.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\PruebaLCD.X.production.obj
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\PruebaLCD.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs94.obj
-intlevel0 0 0 CODE 0 text C:\Users\usr\AppData\Local\Temp\xcAs94.obj
-intlevel1 0 0 CODE 0 text C:\Users\usr\AppData\Local\Temp\xcAs94.obj
-intlevel2 0 0 CODE 0 text C:\Users\usr\AppData\Local\Temp\xcAs94.obj
-intlevel3 0 0 CODE 0 text C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+__accesstop 60 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
+intlevel0 0 0 CODE 0 text C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
+intlevel1 0 0 CODE 0 text C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
+intlevel2 0 0 CODE 0 text C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
+intlevel3 0 0 CODE 0 text C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PruebaLCD.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\PruebaLCD.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\PruebaLCD.X.production.obj
 __pidataCOMRAM BBE 0 CODE 0 idataCOMRAM dist/default/production\PruebaLCD.X.production.obj
 __size_of_HabilitaLCD 0 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\usr\AppData\Local\Temp\xcAs94.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 _DireccionaLCD B86 0 CODE 0 text8 dist/default/production\PruebaLCD.X.production.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\PruebaLCD.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\PruebaLCD.X.production.obj
@@ -329,7 +329,7 @@ start_initialization B3C 0 CODE 0 cinit dist/default/production\PruebaLCD.X.prod
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PruebaLCD.X.production.obj
 ___rparam_used 1 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
 __end_of_EscribeLCD_n8 8F4 0 CODE 0 text5 dist/default/production\PruebaLCD.X.production.obj
-isa$xinst 0 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+isa$xinst 0 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 __size_of_RetardoLCD 0 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
 ___lbdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/production\PruebaLCD.X.production.obj
 __size_of_DireccionaLCD 0 0 ABS 0 - dist/default/production\PruebaLCD.X.production.obj
@@ -362,7 +362,7 @@ __Htext8 0 0 ABS 0 text8 dist/default/production\PruebaLCD.X.production.obj
 __Htext9 0 0 ABS 0 text9 dist/default/production\PruebaLCD.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PruebaLCD.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\PruebaLCD.X.production.obj
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\PruebaLCD.X.production.obj
 __Hconfig 30000E 0 CONFIG 4 config dist/default/production\PruebaLCD.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\PruebaLCD.X.production.obj
@@ -444,9 +444,9 @@ _ConfiguraLCD B58 0 CODE 0 text12 dist/default/production\PruebaLCD.X.production
 ___lbdiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/production\PruebaLCD.X.production.obj
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\PruebaLCD.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\PruebaLCD.X.production.obj
-isa$std 1 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs94.obj
-stackhi 7FF 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs94.obj
-stacklo 60 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+isa$std 1 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
+stackhi 7FF 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
+stacklo 60 0 ABS 0 - C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 __Lintcode 0 0 CODE 0 intcode dist/default/production\PruebaLCD.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\PruebaLCD.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\PruebaLCD.X.production.obj
@@ -482,7 +482,7 @@ __Lstruct 0 0 COMRAM 1 struct dist/default/production\PruebaLCD.X.production.obj
 __Ltext10 0 0 ABS 0 text10 dist/default/production\PruebaLCD.X.production.obj
 __Ltext11 0 0 ABS 0 text11 dist/default/production\PruebaLCD.X.production.obj
 __Ltext12 0 0 ABS 0 text12 dist/default/production\PruebaLCD.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\usr\AppData\Local\Temp\xcAs94.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\usr\AppData\Local\Temp\xcAs1jc.obj
 __end_of_ConfiguraLCD B70 0 CODE 0 text12 dist/default/production\PruebaLCD.X.production.obj
 ___lbmod@dividend 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PruebaLCD.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\PruebaLCD.X.production.obj

@@ -5923,6 +5923,7 @@ break;
 #pragma config WDT=OFF
 void main(void){
 TRISD=0;
+
 LATD=0;
 _delay((unsigned long)((1000)*(1000000/4000.0)));
 ConfiguraLCD(4);

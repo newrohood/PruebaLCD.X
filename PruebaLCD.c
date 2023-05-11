@@ -5,6 +5,7 @@
 #pragma config WDT=OFF
 void main(void){
     TRISD=0;
+    
     LATD=0;
     __delay_ms(1000);
     ConfiguraLCD(4);
