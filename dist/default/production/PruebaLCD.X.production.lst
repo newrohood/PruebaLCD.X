@@ -1,0 +1,1944 @@
+
+
+Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
+                                                                                               Wed Nov 24 16:00:55 2021
+
+Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og9 
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+     7                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     8                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     9                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    10                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text6,global,reloc=2,class=CODE,delta=1,group=1
+    17                           	psect	text7,global,reloc=2,class=CODE,delta=1,group=1
+    18                           	psect	text8,global,reloc=2,class=CODE,delta=1
+    19                           	psect	text9,global,reloc=2,class=CODE,delta=1
+    20                           	psect	text10,global,reloc=2,class=CODE,delta=1
+    21                           	psect	text11,global,reloc=2,class=CODE,delta=1
+    22                           	psect	text12,global,reloc=2,class=CODE,delta=1
+    23                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    24                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    25                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=1,noexec
+    26                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    27  0000                     
+    28                           ; Version 2.32
+    29                           ; Generated 02/02/2021 GMT
+    30                           ; 
+    31                           ; Copyright © 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    32                           ; All rights reserved.
+    33                           ; 
+    34                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    35                           ; 
+    36                           ; Redistribution and use in source and binary forms, with or without modification, are
+    37                           ; permitted provided that the following conditions are met:
+    38                           ; 
+    39                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    40                           ;        conditions and the following disclaimer.
+    41                           ; 
+    42                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    43                           ;        of conditions and the following disclaimer in the documentation and/or other
+    44                           ;        materials provided with the distribution. Publication is not required when
+    45                           ;        this file is used in an embedded application.
+    46                           ; 
+    47                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    48                           ;        software without specific prior written permission.
+    49                           ; 
+    50                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    51                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    52                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    53                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    54                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    55                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    56                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    57                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    58                           ; 
+    59                           ; 
+    60                           ; Code-generator required, PIC18F4550 Definitions
+    61                           ; 
+    62                           ; SFR Addresses
+    63  0000                     
+    64                           	psect	idataCOMRAM
+    65  000BBE                     __pidataCOMRAM:
+    66                           	callstack 0
+    67                           
+    68                           ;initializer for _interfaz
+    69  000BBE  08                 	db	8
+    70  0000                     _TRISD	set	3989
+    71  0000                     _LATD	set	3980
+    72  0000                     _LATD3	set	31843
+    73  0000                     _LATD2	set	31842
+    74                           
+    75                           	psect	smallconst
+    76  000800                     __psmallconst:
+    77                           	callstack 0
+    78  000800  00                 	db	0
+    79  000801                     STR_1:
+    80  000801  48                 	db	72	;'H'
+    81  000802  65                 	db	101	;'e'
+    82  000803  6C                 	db	108	;'l'
+    83  000804  6C                 	db	108	;'l'
+    84  000805  6F                 	db	111	;'o'
+    85  000806  20                 	db	32
+    86  000807  57                 	db	87	;'W'
+    87  000808  6F                 	db	111	;'o'
+    88  000809  72                 	db	114	;'r'
+    89  00080A  6C                 	db	108	;'l'
+    90  00080B  64                 	db	100	;'d'
+    91  00080C  00                 	db	0
+    92  00080D  00                 	db	0	; dummy byte at the end
+    93  0000                     
+    94                           ; #config settings
+    95                           
+    96                           	psect	cinit
+    97  000B3C                     __pcinit:
+    98                           	callstack 0
+    99  000B3C                     start_initialization:
+   100                           	callstack 0
+   101  000B3C                     __initialization:
+   102                           	callstack 0
+   103                           
+   104                           ; Initialize objects allocated to COMRAM (1 bytes)
+   105                           ; load TBLPTR registers with __pidataCOMRAM
+   106  000B3C  0EBE               	movlw	low __pidataCOMRAM
+   107  000B3E  6EF6               	movwf	tblptrl,c
+   108  000B40  0E0B               	movlw	high __pidataCOMRAM
+   109  000B42  6EF7               	movwf	tblptrh,c
+   110  000B44  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   111  000B46  6EF8               	movwf	tblptru,c
+   112  000B48  0009               	tblrd		*+	;fetch initializer
+   113  000B4A  CFF5 F010          	movff	tablat,__pdataCOMRAM
+   114  000B4E                     end_of_initialization:
+   115                           	callstack 0
+   116  000B4E                     __end_of__initialization:
+   117                           	callstack 0
+   118  000B4E  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   119  000B50  6EF8               	movwf	tblptru,c
+   120  000B52  0100               	movlb	0
+   121  000B54  EFC8  F004         	goto	_main	;jump to C main() function
+   122                           
+   123                           	psect	dataCOMRAM
+   124  000010                     __pdataCOMRAM:
+   125                           	callstack 0
+   126  000010                     _interfaz:
+   127                           	callstack 0
+   128  000010                     	ds	1
+   129                           
+   130                           	psect	cstackCOMRAM
+   131  000001                     __pcstackCOMRAM:
+   132                           	callstack 0
+   133  000001                     ??_RetardoLCD:
+   134  000001                     ConfiguraLCD@a:
+   135                           	callstack 0
+   136  000001                     ___lbmod@divisor:
+   137                           	callstack 0
+   138                           
+   139                           ; 1 bytes @ 0x0
+   140  000001                     	ds	1
+   141  000002                     RetardoLCD@a:
+   142                           	callstack 0
+   143  000002                     ___lbmod@dividend:
+   144                           	callstack 0
+   145                           
+   146                           ; 1 bytes @ 0x1
+   147  000002                     	ds	1
+   148  000003                     ??_EnviaDato:
+   149  000003                     ___lbmod@counter:
+   150                           	callstack 0
+   151                           
+   152                           ; 1 bytes @ 0x2
+   153  000003                     	ds	1
+   154  000004                     EnviaDato@a:
+   155                           	callstack 0
+   156  000004                     ___lbmod@rem:
+   157                           	callstack 0
+   158                           
+   159                           ; 1 bytes @ 0x3
+   160  000004                     	ds	1
+   161  000005                     EscribeLCD_c@a:
+   162                           	callstack 0
+   163  000005                     DireccionaLCD@a:
+   164                           	callstack 0
+   165  000005                     ___lbdiv@divisor:
+   166                           	callstack 0
+   167                           
+   168                           ; 1 bytes @ 0x4
+   169  000005                     	ds	1
+   170  000006                     MensajeLCD_Var@a:
+   171                           	callstack 0
+   172  000006                     ___lbdiv@dividend:
+   173                           	callstack 0
+   174                           
+   175                           ; 1 bytes @ 0x5
+   176  000006                     	ds	1
+   177  000007                     ___lbdiv@counter:
+   178                           	callstack 0
+   179                           
+   180                           ; 1 bytes @ 0x6
+   181  000007                     	ds	1
+   182  000008                     ___lbdiv@quotient:
+   183                           	callstack 0
+   184                           
+   185                           ; 1 bytes @ 0x7
+   186  000008                     	ds	1
+   187  000009                     EscribeLCD_n8@b:
+   188                           	callstack 0
+   189                           
+   190                           ; 1 bytes @ 0x8
+   191  000009                     	ds	1
+   192  00000A                     EscribeLCD_n8@centena:
+   193                           	callstack 0
+   194                           
+   195                           ; 1 bytes @ 0x9
+   196  00000A                     	ds	1
+   197  00000B                     EscribeLCD_n8@decena:
+   198                           	callstack 0
+   199                           
+   200                           ; 1 bytes @ 0xA
+   201  00000B                     	ds	1
+   202  00000C                     EscribeLCD_n8@unidad:
+   203                           	callstack 0
+   204                           
+   205                           ; 1 bytes @ 0xB
+   206  00000C                     	ds	1
+   207  00000D                     EscribeLCD_n8@a:
+   208                           	callstack 0
+   209                           
+   210                           ; 1 bytes @ 0xC
+   211  00000D                     	ds	1
+   212  00000E                     ??_main:
+   213                           
+   214                           ; 1 bytes @ 0xD
+   215  00000E                     	ds	2
+   216                           
+   217 ;;
+   218 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   219 ;;
+   220 ;; *************** function _main *****************
+   221 ;; Defined at:
+   222 ;;		line 6 in file "PruebaLCD.c"
+   223 ;; Parameters:    Size  Location     Type
+   224 ;;		None
+   225 ;; Auto vars:     Size  Location     Type
+   226 ;;		None
+   227 ;; Return value:  Size  Location     Type
+   228 ;;                  1    wreg      void 
+   229 ;; Registers used:
+   230 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   231 ;; Tracked objects:
+   232 ;;		On entry : 0/0
+   233 ;;		On exit  : 0/0
+   234 ;;		Unchanged: 0/0
+   235 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   236 ;;      Params:         0       0       0       0       0       0       0       0       0
+   237 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   238 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   239 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   240 ;;Total ram usage:        2 bytes
+   241 ;; Hardware stack levels required when called: 4
+   242 ;; This function calls:
+   243 ;;		_ConfiguraLCD
+   244 ;;		_DireccionaLCD
+   245 ;;		_EscribeLCD_c
+   246 ;;		_EscribeLCD_n8
+   247 ;;		_InicializaLCD
+   248 ;;		_MensajeLCD_Var
+   249 ;; This function is called by:
+   250 ;;		Startup code after reset
+   251 ;; This function uses a non-reentrant model
+   252 ;;
+   253                           
+   254                           	psect	text0
+   255  000990                     __ptext0:
+   256                           	callstack 0
+   257  000990                     _main:
+   258                           	callstack 27
+   259                           
+   260                           ;PruebaLCD.c: 7: TRISD=0;
+   261                           
+   262                           ;incstack = 0
+   263  000990  0E00               	movlw	0
+   264  000992  6E95               	movwf	149,c	;volatile
+   265                           
+   266                           ;PruebaLCD.c: 8: LATD=0;
+   267  000994  0E00               	movlw	0
+   268  000996  6E8C               	movwf	140,c	;volatile
+   269                           
+   270                           ;PruebaLCD.c: 9: _delay((unsigned long)((1000)*(1000000/4000.0)));
+   271  000998  0E02               	movlw	2
+   272  00099A  6E0F               	movwf	(??_main+1)^0,c
+   273  00099C  0E45               	movlw	69
+   274  00099E  6E0E               	movwf	??_main^0,c
+   275  0009A0  0EAA               	movlw	170
+   276  0009A2                     u197:
+   277  0009A2  2EE8               	decfsz	wreg,f,c
+   278  0009A4  D7FE               	bra	u197
+   279  0009A6  2E0E               	decfsz	??_main^0,f,c
+   280  0009A8  D7FC               	bra	u197
+   281  0009AA  2E0F               	decfsz	(??_main+1)^0,f,c
+   282  0009AC  D7FA               	bra	u197
+   283                           
+   284                           ;PruebaLCD.c: 10: ConfiguraLCD(4);
+   285  0009AE  0E04               	movlw	4
+   286  0009B0  ECAC  F005         	call	_ConfiguraLCD
+   287                           
+   288                           ;PruebaLCD.c: 11: InicializaLCD();
+   289  0009B4  EC7A  F004         	call	_InicializaLCD	;wreg free
+   290                           
+   291                           ;PruebaLCD.c: 12: EscribeLCD_c('H');
+   292  0009B8  0E48               	movlw	72
+   293  0009BA  ECB8  F005         	call	_EscribeLCD_c
+   294                           
+   295                           ;PruebaLCD.c: 13: EscribeLCD_c('o');
+   296  0009BE  0E6F               	movlw	111
+   297  0009C0  ECB8  F005         	call	_EscribeLCD_c
+   298                           
+   299                           ;PruebaLCD.c: 14: EscribeLCD_c('l');
+   300  0009C4  0E6C               	movlw	108
+   301  0009C6  ECB8  F005         	call	_EscribeLCD_c
+   302                           
+   303                           ;PruebaLCD.c: 15: EscribeLCD_c('a');
+   304  0009CA  0E61               	movlw	97
+   305  0009CC  ECB8  F005         	call	_EscribeLCD_c
+   306                           
+   307                           ;PruebaLCD.c: 16: EscribeLCD_c(' ');
+   308  0009D0  0E20               	movlw	32
+   309  0009D2  ECB8  F005         	call	_EscribeLCD_c
+   310                           
+   311                           ;PruebaLCD.c: 17: EscribeLCD_c('M');
+   312  0009D6  0E4D               	movlw	77
+   313  0009D8  ECB8  F005         	call	_EscribeLCD_c
+   314                           
+   315                           ;PruebaLCD.c: 18: EscribeLCD_c('u');
+   316  0009DC  0E75               	movlw	117
+   317  0009DE  ECB8  F005         	call	_EscribeLCD_c
+   318                           
+   319                           ;PruebaLCD.c: 19: EscribeLCD_c('n');
+   320  0009E2  0E6E               	movlw	110
+   321  0009E4  ECB8  F005         	call	_EscribeLCD_c
+   322                           
+   323                           ;PruebaLCD.c: 20: EscribeLCD_c('d');
+   324  0009E8  0E64               	movlw	100
+   325  0009EA  ECB8  F005         	call	_EscribeLCD_c
+   326                           
+   327                           ;PruebaLCD.c: 21: EscribeLCD_c('o');
+   328  0009EE  0E6F               	movlw	111
+   329  0009F0  ECB8  F005         	call	_EscribeLCD_c
+   330                           
+   331                           ;PruebaLCD.c: 22: EscribeLCD_c('&');
+   332  0009F4  0E26               	movlw	38
+   333  0009F6  ECB8  F005         	call	_EscribeLCD_c
+   334                           
+   335                           ;PruebaLCD.c: 23: DireccionaLCD(0xC0);
+   336  0009FA  0EC0               	movlw	192
+   337  0009FC  ECC3  F005         	call	_DireccionaLCD
+   338                           
+   339                           ;PruebaLCD.c: 24: MensajeLCD_Var("Hello World");
+   340  000A00  0E01               	movlw	low STR_1
+   341  000A02  6E06               	movwf	MensajeLCD_Var@a^0,c
+   342  000A04  EC8A  F005         	call	_MensajeLCD_Var	;wreg free
+   343                           
+   344                           ;PruebaLCD.c: 25: EscribeLCD_n8(255,3);
+   345  000A08  0E03               	movlw	3
+   346  000A0A  6E09               	movwf	EscribeLCD_n8@b^0,c
+   347  000A0C  0EFF               	movlw	255
+   348  000A0E  EC07  F004         	call	_EscribeLCD_n8
+   349  000A12                     l121:
+   350  000A12  D7FF               	goto	l121
+   351  000A14                     __end_of_main:
+   352                           	callstack 0
+   353                           
+   354 ;; *************** function _MensajeLCD_Var *****************
+   355 ;; Defined at:
+   356 ;;		line 232 in file "LibLCDXC8.h"
+   357 ;; Parameters:    Size  Location     Type
+   358 ;;  a               1    5[COMRAM] PTR unsigned char 
+   359 ;;		 -> STR_1(12), 
+   360 ;; Auto vars:     Size  Location     Type
+   361 ;;		None
+   362 ;; Return value:  Size  Location     Type
+   363 ;;                  1    wreg      void 
+   364 ;; Registers used:
+   365 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   366 ;; Tracked objects:
+   367 ;;		On entry : 0/0
+   368 ;;		On exit  : 0/0
+   369 ;;		Unchanged: 0/0
+   370 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   371 ;;      Params:         1       0       0       0       0       0       0       0       0
+   372 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   373 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   374 ;;      Totals:         1       0       0       0       0       0       0       0       0
+   375 ;;Total ram usage:        1 bytes
+   376 ;; Hardware stack levels used: 1
+   377 ;; Hardware stack levels required when called: 3
+   378 ;; This function calls:
+   379 ;;		_EscribeLCD_c
+   380 ;; This function is called by:
+   381 ;;		_main
+   382 ;; This function uses a non-reentrant model
+   383 ;;
+   384                           
+   385                           	psect	text1
+   386  000B14                     __ptext1:
+   387                           	callstack 0
+   388  000B14                     _MensajeLCD_Var:
+   389                           	callstack 27
+   390                           
+   391                           ;LibLCDXC8.h: 236: while(*a != '\0'){
+   392                           
+   393                           ;incstack = 0
+   394  000B14  D009               	goto	l1194
+   395  000B16                     l1190:
+   396                           
+   397                           ;LibLCDXC8.h: 237: EscribeLCD_c(*a);
+   398  000B16  C006  FFF6         	movff	MensajeLCD_Var@a,tblptrl
+   399  000B1A                     	if	1	;There is more than 1 active tblptr byte
+   400  000B1A  0E08               	movlw	high __smallconst
+   401  000B1C  6EF7               	movwf	tblptrh,c
+   402  000B1E                     	endif
+   403  000B1E                     	if	0	;tblptru may be non-zero
+   404  000B1E                     	endif
+   405  000B1E                     	if	0	;tblptru may be non-zero
+   406  000B1E                     	endif
+   407  000B1E  0008               	tblrd		*
+   408  000B20  50F5               	movf	tablat,w,c
+   409  000B22  ECB8  F005         	call	_EscribeLCD_c
+   410                           
+   411                           ;LibLCDXC8.h: 238: a++;
+   412  000B26  2A06               	incf	MensajeLCD_Var@a^0,f,c
+   413  000B28                     l1194:
+   414  000B28  C006  FFF6         	movff	MensajeLCD_Var@a,tblptrl
+   415  000B2C                     	if	1	;There is more than 1 active tblptr byte
+   416  000B2C  0E08               	movlw	high __smallconst
+   417  000B2E  6EF7               	movwf	tblptrh,c
+   418  000B30                     	endif
+   419  000B30                     	if	0	;tblptru may be non-zero
+   420  000B30                     	endif
+   421  000B30                     	if	0	;tblptru may be non-zero
+   422  000B30                     	endif
+   423  000B30  0008               	tblrd		*
+   424  000B32  50F5               	movf	tablat,w,c
+   425  000B34  0900               	iorlw	0
+   426  000B36  B4D8               	btfsc	status,2,c
+   427  000B38  0012               	return	
+   428  000B3A  D7ED               	goto	l1190
+   429  000B3C                     __end_of_MensajeLCD_Var:
+   430                           	callstack 0
+   431                           
+   432 ;; *************** function _EscribeLCD_c *****************
+   433 ;; Defined at:
+   434 ;;		line 136 in file "LibLCDXC8.h"
+   435 ;; Parameters:    Size  Location     Type
+   436 ;;  a               1    wreg     unsigned char 
+   437 ;; Auto vars:     Size  Location     Type
+   438 ;;  a               1    4[COMRAM] unsigned char 
+   439 ;; Return value:  Size  Location     Type
+   440 ;;                  1    wreg      void 
+   441 ;; Registers used:
+   442 ;;		wreg, status,2, status,0, cstack
+   443 ;; Tracked objects:
+   444 ;;		On entry : 0/0
+   445 ;;		On exit  : 0/0
+   446 ;;		Unchanged: 0/0
+   447 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   448 ;;      Params:         0       0       0       0       0       0       0       0       0
+   449 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   450 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   451 ;;      Totals:         1       0       0       0       0       0       0       0       0
+   452 ;;Total ram usage:        1 bytes
+   453 ;; Hardware stack levels used: 1
+   454 ;; Hardware stack levels required when called: 2
+   455 ;; This function calls:
+   456 ;;		_EnviaDato
+   457 ;;		_HabilitaLCD
+   458 ;;		_RetardoLCD
+   459 ;; This function is called by:
+   460 ;;		_MensajeLCD_Var
+   461 ;;		_main
+   462 ;; This function uses a non-reentrant model
+   463 ;;
+   464                           
+   465                           	psect	text2
+   466  000B70                     __ptext2:
+   467                           	callstack 0
+   468  000B70                     _EscribeLCD_c:
+   469                           	callstack 27
+   470                           
+   471                           ;incstack = 0
+   472                           ;EscribeLCD_c@a stored from wreg
+   473  000B70  6E05               	movwf	EscribeLCD_c@a^0,c
+   474                           
+   475                           ;LibLCDXC8.h: 140: LATD2=1;
+   476  000B72  848C               	bsf	3980,2,c	;volatile
+   477                           
+   478                           ;LibLCDXC8.h: 141: EnviaDato(a);
+   479  000B74  5005               	movf	EscribeLCD_c@a^0,w,c
+   480  000B76  EC35  F005         	call	_EnviaDato
+   481                           
+   482                           ;LibLCDXC8.h: 142: HabilitaLCD();
+   483  000B7A  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   484                           
+   485                           ;LibLCDXC8.h: 143: RetardoLCD(4);
+   486  000B7E  0E04               	movlw	4
+   487  000B80  EC0A  F005         	call	_RetardoLCD
+   488  000B84  0012               	return		;funcret
+   489  000B86                     __end_of_EscribeLCD_c:
+   490                           	callstack 0
+   491                           
+   492 ;; *************** function _InicializaLCD *****************
+   493 ;; Defined at:
+   494 ;;		line 71 in file "LibLCDXC8.h"
+   495 ;; Parameters:    Size  Location     Type
+   496 ;;		None
+   497 ;; Auto vars:     Size  Location     Type
+   498 ;;		None
+   499 ;; Return value:  Size  Location     Type
+   500 ;;                  1    wreg      void 
+   501 ;; Registers used:
+   502 ;;		wreg, status,2, status,0, cstack
+   503 ;; Tracked objects:
+   504 ;;		On entry : 0/0
+   505 ;;		On exit  : 0/0
+   506 ;;		Unchanged: 0/0
+   507 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   508 ;;      Params:         0       0       0       0       0       0       0       0       0
+   509 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   510 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   511 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   512 ;;Total ram usage:        0 bytes
+   513 ;; Hardware stack levels used: 1
+   514 ;; Hardware stack levels required when called: 3
+   515 ;; This function calls:
+   516 ;;		_BorraLCD
+   517 ;;		_EnviaDato
+   518 ;;		_HabilitaLCD
+   519 ;;		_RetardoLCD
+   520 ;; This function is called by:
+   521 ;;		_main
+   522 ;; This function uses a non-reentrant model
+   523 ;;
+   524                           
+   525                           	psect	text3
+   526  0008F4                     __ptext3:
+   527                           	callstack 0
+   528  0008F4                     _InicializaLCD:
+   529                           	callstack 27
+   530                           
+   531                           ;LibLCDXC8.h: 73: LATD2=0;
+   532                           
+   533                           ;incstack = 0
+   534  0008F4  948C               	bcf	3980,2,c	;volatile
+   535                           
+   536                           ;LibLCDXC8.h: 74: if(interfaz==4)
+   537  0008F6  0E04               	movlw	4
+   538  0008F8  1810               	xorwf	_interfaz^0,w,c
+   539  0008FA  A4D8               	btfss	status,2,c
+   540  0008FC  D004               	goto	l974
+   541                           
+   542                           ;LibLCDXC8.h: 75: LATD=(LATD & 0b00001111) | 0x30;
+   543  0008FE  508C               	movf	140,w,c	;volatile
+   544  000900  0B0F               	andlw	15
+   545  000902  0930               	iorlw	48
+   546  000904  D001               	goto	L1
+   547  000906                     l974:
+   548                           
+   549                           ;LibLCDXC8.h: 76: else;LibLCDXC8.h: 77: LATD=0x3F;
+   550  000906  0E3F               	movlw	63
+   551  000908                     L1:
+   552  000908  6E8C               	movwf	140,c	;volatile
+   553                           
+   554                           ;LibLCDXC8.h: 78: HabilitaLCD();
+   555  00090A  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   556                           
+   557                           ;LibLCDXC8.h: 79: RetardoLCD(1);
+   558  00090E  0E01               	movlw	1
+   559  000910  EC0A  F005         	call	_RetardoLCD
+   560                           
+   561                           ;LibLCDXC8.h: 80: if(interfaz==4)
+   562  000914  0E04               	movlw	4
+   563  000916  1810               	xorwf	_interfaz^0,w,c
+   564  000918  A4D8               	btfss	status,2,c
+   565  00091A  D004               	goto	l984
+   566                           
+   567                           ;LibLCDXC8.h: 81: LATD=(LATD & 0b00001111) | 0x30;
+   568  00091C  508C               	movf	140,w,c	;volatile
+   569  00091E  0B0F               	andlw	15
+   570  000920  0930               	iorlw	48
+   571  000922  D001               	goto	L2
+   572  000924                     l984:
+   573                           
+   574                           ;LibLCDXC8.h: 82: else;LibLCDXC8.h: 83: LATD=0x3F;
+   575  000924  0E3F               	movlw	63
+   576  000926                     L2:
+   577  000926  6E8C               	movwf	140,c	;volatile
+   578                           
+   579                           ;LibLCDXC8.h: 84: HabilitaLCD();
+   580  000928  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   581                           
+   582                           ;LibLCDXC8.h: 85: RetardoLCD(3);
+   583  00092C  0E03               	movlw	3
+   584  00092E  EC0A  F005         	call	_RetardoLCD
+   585                           
+   586                           ;LibLCDXC8.h: 86: if(interfaz==4)
+   587  000932  0E04               	movlw	4
+   588  000934  1810               	xorwf	_interfaz^0,w,c
+   589  000936  A4D8               	btfss	status,2,c
+   590  000938  D004               	goto	l994
+   591                           
+   592                           ;LibLCDXC8.h: 87: LATD=(LATD & 0b00001111) | 0x30;
+   593  00093A  508C               	movf	140,w,c	;volatile
+   594  00093C  0B0F               	andlw	15
+   595  00093E  0930               	iorlw	48
+   596  000940  D001               	goto	L3
+   597  000942                     l994:
+   598                           
+   599                           ;LibLCDXC8.h: 88: else;LibLCDXC8.h: 89: LATD=0x3F;
+   600  000942  0E3F               	movlw	63
+   601  000944                     L3:
+   602  000944  6E8C               	movwf	140,c	;volatile
+   603                           
+   604                           ;LibLCDXC8.h: 90: HabilitaLCD();
+   605  000946  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   606                           
+   607                           ;LibLCDXC8.h: 91: RetardoLCD(4);
+   608  00094A  0E04               	movlw	4
+   609  00094C  EC0A  F005         	call	_RetardoLCD
+   610                           
+   611                           ;LibLCDXC8.h: 92: if(interfaz==4){
+   612  000950  0E04               	movlw	4
+   613  000952  1810               	xorwf	_interfaz^0,w,c
+   614  000954  A4D8               	btfss	status,2,c
+   615  000956  D011               	goto	l1014
+   616                           
+   617                           ;LibLCDXC8.h: 93: LATD=(LATD & 0b00001111) | 0x20;
+   618  000958  508C               	movf	140,w,c	;volatile
+   619  00095A  0B0F               	andlw	15
+   620  00095C  0920               	iorlw	32
+   621  00095E  6E8C               	movwf	140,c	;volatile
+   622                           
+   623                           ;LibLCDXC8.h: 94: HabilitaLCD();
+   624  000960  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   625                           
+   626                           ;LibLCDXC8.h: 95: RetardoLCD(4);
+   627  000964  0E04               	movlw	4
+   628  000966  EC0A  F005         	call	_RetardoLCD
+   629                           
+   630                           ;LibLCDXC8.h: 96: EnviaDato(0x2F);
+   631  00096A  0E2F               	movlw	47
+   632  00096C  EC35  F005         	call	_EnviaDato
+   633                           
+   634                           ;LibLCDXC8.h: 97: HabilitaLCD();
+   635  000970  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   636                           
+   637                           ;LibLCDXC8.h: 98: RetardoLCD(4);
+   638  000974  0E04               	movlw	4
+   639  000976  EC0A  F005         	call	_RetardoLCD
+   640  00097A                     l1014:
+   641                           
+   642                           ;LibLCDXC8.h: 99: };LibLCDXC8.h: 100: BorraLCD();
+   643  00097A  ECCE  F005         	call	_BorraLCD	;wreg free
+   644                           
+   645                           ;LibLCDXC8.h: 101: EnviaDato(0xF);
+   646  00097E  0E0F               	movlw	15
+   647  000980  EC35  F005         	call	_EnviaDato
+   648                           
+   649                           ;LibLCDXC8.h: 102: HabilitaLCD();
+   650  000984  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   651                           
+   652                           ;LibLCDXC8.h: 103: RetardoLCD(4);
+   653  000988  0E04               	movlw	4
+   654  00098A  EC0A  F005         	call	_RetardoLCD
+   655  00098E  0012               	return		;funcret
+   656  000990                     __end_of_InicializaLCD:
+   657                           	callstack 0
+   658                           
+   659 ;; *************** function _BorraLCD *****************
+   660 ;; Defined at:
+   661 ;;		line 112 in file "LibLCDXC8.h"
+   662 ;; Parameters:    Size  Location     Type
+   663 ;;		None
+   664 ;; Auto vars:     Size  Location     Type
+   665 ;;		None
+   666 ;; Return value:  Size  Location     Type
+   667 ;;                  1    wreg      void 
+   668 ;; Registers used:
+   669 ;;		wreg, status,2, status,0, cstack
+   670 ;; Tracked objects:
+   671 ;;		On entry : 0/0
+   672 ;;		On exit  : 0/0
+   673 ;;		Unchanged: 0/0
+   674 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   675 ;;      Params:         0       0       0       0       0       0       0       0       0
+   676 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   677 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   678 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   679 ;;Total ram usage:        0 bytes
+   680 ;; Hardware stack levels used: 1
+   681 ;; Hardware stack levels required when called: 2
+   682 ;; This function calls:
+   683 ;;		_EnviaDato
+   684 ;;		_HabilitaLCD
+   685 ;;		_RetardoLCD
+   686 ;; This function is called by:
+   687 ;;		_InicializaLCD
+   688 ;; This function uses a non-reentrant model
+   689 ;;
+   690                           
+   691                           	psect	text4
+   692  000B9C                     __ptext4:
+   693                           	callstack 0
+   694  000B9C                     _BorraLCD:
+   695                           	callstack 27
+   696                           
+   697                           ;LibLCDXC8.h: 114: LATD2=0;
+   698                           
+   699                           ;incstack = 0
+   700  000B9C  948C               	bcf	3980,2,c	;volatile
+   701                           
+   702                           ;LibLCDXC8.h: 115: EnviaDato(0x01);
+   703  000B9E  0E01               	movlw	1
+   704  000BA0  EC35  F005         	call	_EnviaDato
+   705                           
+   706                           ;LibLCDXC8.h: 116: HabilitaLCD();
+   707  000BA4  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   708                           
+   709                           ;LibLCDXC8.h: 117: RetardoLCD(2);
+   710  000BA8  0E02               	movlw	2
+   711  000BAA  EC0A  F005         	call	_RetardoLCD
+   712  000BAE  0012               	return		;funcret
+   713  000BB0                     __end_of_BorraLCD:
+   714                           	callstack 0
+   715                           
+   716 ;; *************** function _EscribeLCD_n8 *****************
+   717 ;; Defined at:
+   718 ;;		line 145 in file "LibLCDXC8.h"
+   719 ;; Parameters:    Size  Location     Type
+   720 ;;  a               1    wreg     unsigned char 
+   721 ;;  b               1    8[COMRAM] unsigned char 
+   722 ;; Auto vars:     Size  Location     Type
+   723 ;;  a               1   12[COMRAM] unsigned char 
+   724 ;;  unidad          1   11[COMRAM] unsigned char 
+   725 ;;  decena          1   10[COMRAM] unsigned char 
+   726 ;;  centena         1    9[COMRAM] unsigned char 
+   727 ;; Return value:  Size  Location     Type
+   728 ;;                  1    wreg      void 
+   729 ;; Registers used:
+   730 ;;		wreg, status,2, status,0, cstack
+   731 ;; Tracked objects:
+   732 ;;		On entry : 0/0
+   733 ;;		On exit  : 0/0
+   734 ;;		Unchanged: 0/0
+   735 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   736 ;;      Params:         1       0       0       0       0       0       0       0       0
+   737 ;;      Locals:         4       0       0       0       0       0       0       0       0
+   738 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   739 ;;      Totals:         5       0       0       0       0       0       0       0       0
+   740 ;;Total ram usage:        5 bytes
+   741 ;; Hardware stack levels used: 1
+   742 ;; Hardware stack levels required when called: 2
+   743 ;; This function calls:
+   744 ;;		_EnviaDato
+   745 ;;		_HabilitaLCD
+   746 ;;		_RetardoLCD
+   747 ;;		___lbdiv
+   748 ;;		___lbmod
+   749 ;; This function is called by:
+   750 ;;		_main
+   751 ;; This function uses a non-reentrant model
+   752 ;;
+   753                           
+   754                           	psect	text5
+   755  00080E                     __ptext5:
+   756                           	callstack 0
+   757  00080E                     _EscribeLCD_n8:
+   758                           	callstack 28
+   759                           
+   760                           ;incstack = 0
+   761                           ;EscribeLCD_n8@a stored from wreg
+   762  00080E  6E0D               	movwf	EscribeLCD_n8@a^0,c
+   763                           
+   764                           ;LibLCDXC8.h: 150: unsigned char centena,decena,unidad;;LibLCDXC8.h: 151: LATD2=1;
+   765  000810  848C               	bsf	3980,2,c	;volatile
+   766                           
+   767                           ;LibLCDXC8.h: 152: switch(b){
+   768  000812  D065               	goto	l1186
+   769  000814                     l1154:
+   770  000814  0E0A               	movlw	10
+   771  000816  6E01               	movwf	___lbmod@divisor^0,c
+   772  000818  500D               	movf	EscribeLCD_n8@a^0,w,c
+   773  00081A  EC75  F005         	call	___lbmod
+   774  00081E  6E0C               	movwf	EscribeLCD_n8@unidad^0,c
+   775                           
+   776                           ;LibLCDXC8.h: 154: EnviaDato(unidad+48);
+   777  000820  500C               	movf	EscribeLCD_n8@unidad^0,w,c
+   778  000822  0F30               	addlw	48
+   779  000824  EC35  F005         	call	_EnviaDato
+   780                           
+   781                           ;LibLCDXC8.h: 155: HabilitaLCD();
+   782  000828  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   783                           
+   784                           ;LibLCDXC8.h: 156: RetardoLCD(4);
+   785  00082C  0E04               	movlw	4
+   786  00082E  EC0A  F005         	call	_RetardoLCD
+   787                           
+   788                           ;LibLCDXC8.h: 157: break;
+   789  000832  0012               	return	
+   790  000834                     l1160:
+   791  000834  0E0A               	movlw	10
+   792  000836  6E05               	movwf	___lbdiv@divisor^0,c
+   793  000838  0E64               	movlw	100
+   794  00083A  6E01               	movwf	___lbmod@divisor^0,c
+   795  00083C  500D               	movf	EscribeLCD_n8@a^0,w,c
+   796  00083E  EC75  F005         	call	___lbmod
+   797  000842  EC58  F005         	call	___lbdiv
+   798  000846  6E0B               	movwf	EscribeLCD_n8@decena^0,c
+   799                           
+   800                           ;LibLCDXC8.h: 159: unidad=a%10;
+   801  000848  0E0A               	movlw	10
+   802  00084A  6E01               	movwf	___lbmod@divisor^0,c
+   803  00084C  500D               	movf	EscribeLCD_n8@a^0,w,c
+   804  00084E  EC75  F005         	call	___lbmod
+   805  000852  6E0C               	movwf	EscribeLCD_n8@unidad^0,c
+   806                           
+   807                           ;LibLCDXC8.h: 160: EnviaDato(decena+48);
+   808  000854  500B               	movf	EscribeLCD_n8@decena^0,w,c
+   809  000856  0F30               	addlw	48
+   810  000858  EC35  F005         	call	_EnviaDato
+   811                           
+   812                           ;LibLCDXC8.h: 161: HabilitaLCD();
+   813  00085C  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   814                           
+   815                           ;LibLCDXC8.h: 162: RetardoLCD(4);
+   816  000860  0E04               	movlw	4
+   817  000862  EC0A  F005         	call	_RetardoLCD
+   818                           
+   819                           ;LibLCDXC8.h: 163: EnviaDato(unidad+48);
+   820  000866  500C               	movf	EscribeLCD_n8@unidad^0,w,c
+   821  000868  0F30               	addlw	48
+   822  00086A  EC35  F005         	call	_EnviaDato
+   823                           
+   824                           ;LibLCDXC8.h: 164: HabilitaLCD();
+   825  00086E  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   826                           
+   827                           ;LibLCDXC8.h: 165: RetardoLCD(4);
+   828  000872  0E04               	movlw	4
+   829  000874  EC0A  F005         	call	_RetardoLCD
+   830                           
+   831                           ;LibLCDXC8.h: 166: break;
+   832  000878  0012               	return	
+   833  00087A                     l1170:
+   834  00087A  0E64               	movlw	100
+   835  00087C  6E05               	movwf	___lbdiv@divisor^0,c
+   836  00087E  500D               	movf	EscribeLCD_n8@a^0,w,c
+   837  000880  EC58  F005         	call	___lbdiv
+   838  000884  6E0A               	movwf	EscribeLCD_n8@centena^0,c
+   839                           
+   840                           ;LibLCDXC8.h: 168: decena=(a%100)/10;
+   841  000886  0E0A               	movlw	10
+   842  000888  6E05               	movwf	___lbdiv@divisor^0,c
+   843  00088A  0E64               	movlw	100
+   844  00088C  6E01               	movwf	___lbmod@divisor^0,c
+   845  00088E  500D               	movf	EscribeLCD_n8@a^0,w,c
+   846  000890  EC75  F005         	call	___lbmod
+   847  000894  EC58  F005         	call	___lbdiv
+   848  000898  6E0B               	movwf	EscribeLCD_n8@decena^0,c
+   849                           
+   850                           ;LibLCDXC8.h: 169: unidad=a%10;
+   851  00089A  0E0A               	movlw	10
+   852  00089C  6E01               	movwf	___lbmod@divisor^0,c
+   853  00089E  500D               	movf	EscribeLCD_n8@a^0,w,c
+   854  0008A0  EC75  F005         	call	___lbmod
+   855  0008A4  6E0C               	movwf	EscribeLCD_n8@unidad^0,c
+   856                           
+   857                           ;LibLCDXC8.h: 170: EnviaDato(centena+48);
+   858  0008A6  500A               	movf	EscribeLCD_n8@centena^0,w,c
+   859  0008A8  0F30               	addlw	48
+   860  0008AA  EC35  F005         	call	_EnviaDato
+   861                           
+   862                           ;LibLCDXC8.h: 171: HabilitaLCD();
+   863  0008AE  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   864                           
+   865                           ;LibLCDXC8.h: 172: RetardoLCD(4);
+   866  0008B2  0E04               	movlw	4
+   867  0008B4  EC0A  F005         	call	_RetardoLCD
+   868                           
+   869                           ;LibLCDXC8.h: 173: EnviaDato(decena+48);
+   870  0008B8  500B               	movf	EscribeLCD_n8@decena^0,w,c
+   871  0008BA  0F30               	addlw	48
+   872  0008BC  EC35  F005         	call	_EnviaDato
+   873                           
+   874                           ;LibLCDXC8.h: 174: HabilitaLCD();
+   875  0008C0  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   876                           
+   877                           ;LibLCDXC8.h: 175: RetardoLCD(4);
+   878  0008C4  0E04               	movlw	4
+   879  0008C6  EC0A  F005         	call	_RetardoLCD
+   880                           
+   881                           ;LibLCDXC8.h: 176: EnviaDato(unidad+48);
+   882  0008CA  500C               	movf	EscribeLCD_n8@unidad^0,w,c
+   883  0008CC  0F30               	addlw	48
+   884  0008CE  EC35  F005         	call	_EnviaDato
+   885                           
+   886                           ;LibLCDXC8.h: 177: HabilitaLCD();
+   887  0008D2  ECD8  F005         	call	_HabilitaLCD	;wreg free
+   888                           
+   889                           ;LibLCDXC8.h: 178: RetardoLCD(4);
+   890  0008D6  0E04               	movlw	4
+   891  0008D8  EC0A  F005         	call	_RetardoLCD
+   892                           
+   893                           ;LibLCDXC8.h: 179: break;
+   894  0008DC  0012               	return	
+   895  0008DE                     l1186:
+   896  0008DE  5009               	movf	EscribeLCD_n8@b^0,w,c
+   897                           
+   898                           ; Switch size 1, requested type "simple"
+   899                           ; Number of cases is 3, Range of values is 1 to 3
+   900                           ; switch strategies available:
+   901                           ; Name         Instructions Cycles
+   902                           ; simple_byte           10     6 (average)
+   903                           ;	Chosen strategy is simple_byte
+   904  0008E0  0A01               	xorlw	1	; case 1
+   905  0008E2  B4D8               	btfsc	status,2,c
+   906  0008E4  D797               	goto	l1154
+   907  0008E6  0A03               	xorlw	3	; case 2
+   908  0008E8  B4D8               	btfsc	status,2,c
+   909  0008EA  D7A4               	goto	l1160
+   910  0008EC  0A01               	xorlw	1	; case 3
+   911  0008EE  A4D8               	btfss	status,2,c
+   912  0008F0  0012               	return	
+   913  0008F2  D7C3               	goto	l1170
+   914  0008F4                     __end_of_EscribeLCD_n8:
+   915                           	callstack 0
+   916                           
+   917 ;; *************** function ___lbmod *****************
+   918 ;; Defined at:
+   919 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lbmod.c"
+   920 ;; Parameters:    Size  Location     Type
+   921 ;;  dividend        1    wreg     unsigned char 
+   922 ;;  divisor         1    0[COMRAM] unsigned char 
+   923 ;; Auto vars:     Size  Location     Type
+   924 ;;  dividend        1    1[COMRAM] unsigned char 
+   925 ;;  rem             1    3[COMRAM] unsigned char 
+   926 ;;  counter         1    2[COMRAM] unsigned char 
+   927 ;; Return value:  Size  Location     Type
+   928 ;;                  1    wreg      unsigned char 
+   929 ;; Registers used:
+   930 ;;		wreg, status,2, status,0
+   931 ;; Tracked objects:
+   932 ;;		On entry : 0/0
+   933 ;;		On exit  : 0/0
+   934 ;;		Unchanged: 0/0
+   935 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   936 ;;      Params:         1       0       0       0       0       0       0       0       0
+   937 ;;      Locals:         3       0       0       0       0       0       0       0       0
+   938 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   939 ;;      Totals:         4       0       0       0       0       0       0       0       0
+   940 ;;Total ram usage:        4 bytes
+   941 ;; Hardware stack levels used: 1
+   942 ;; This function calls:
+   943 ;;		Nothing
+   944 ;; This function is called by:
+   945 ;;		_EscribeLCD_n8
+   946 ;; This function uses a non-reentrant model
+   947 ;;
+   948                           
+   949                           	psect	text6
+   950  000AEA                     __ptext6:
+   951                           	callstack 0
+   952  000AEA                     ___lbmod:
+   953                           	callstack 29
+   954                           
+   955                           ;incstack = 0
+   956                           ;___lbmod@dividend stored from wreg
+   957  000AEA  6E02               	movwf	___lbmod@dividend^0,c
+   958  000AEC  0E08               	movlw	8
+   959  000AEE  6E03               	movwf	___lbmod@counter^0,c
+   960  000AF0  0E00               	movlw	0
+   961  000AF2  6E04               	movwf	___lbmod@rem^0,c
+   962  000AF4                     l1138:
+   963  000AF4  90D8               	bcf	status,0,c
+   964  000AF6  3402               	rlcf	___lbmod@dividend^0,w,c
+   965  000AF8  3404               	rlcf	___lbmod@rem^0,w,c
+   966  000AFA  6E04               	movwf	___lbmod@rem^0,c
+   967  000AFC  90D8               	bcf	status,0,c
+   968  000AFE  3602               	rlcf	___lbmod@dividend^0,f,c
+   969  000B00  5001               	movf	___lbmod@divisor^0,w,c
+   970  000B02  5C04               	subwf	___lbmod@rem^0,w,c
+   971  000B04  A0D8               	btfss	status,0,c
+   972  000B06  D002               	goto	l1146
+   973  000B08  5001               	movf	___lbmod@divisor^0,w,c
+   974  000B0A  5E04               	subwf	___lbmod@rem^0,f,c
+   975  000B0C                     l1146:
+   976  000B0C  2E03               	decfsz	___lbmod@counter^0,f,c
+   977  000B0E  D7F2               	goto	l1138
+   978  000B10  5004               	movf	___lbmod@rem^0,w,c
+   979  000B12  0012               	return		;funcret
+   980  000B14                     __end_of___lbmod:
+   981                           	callstack 0
+   982                           
+   983 ;; *************** function ___lbdiv *****************
+   984 ;; Defined at:
+   985 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lbdiv.c"
+   986 ;; Parameters:    Size  Location     Type
+   987 ;;  dividend        1    wreg     unsigned char 
+   988 ;;  divisor         1    4[COMRAM] unsigned char 
+   989 ;; Auto vars:     Size  Location     Type
+   990 ;;  dividend        1    5[COMRAM] unsigned char 
+   991 ;;  quotient        1    7[COMRAM] unsigned char 
+   992 ;;  counter         1    6[COMRAM] unsigned char 
+   993 ;; Return value:  Size  Location     Type
+   994 ;;                  1    wreg      unsigned char 
+   995 ;; Registers used:
+   996 ;;		wreg, status,2, status,0
+   997 ;; Tracked objects:
+   998 ;;		On entry : 0/0
+   999 ;;		On exit  : 0/0
+  1000 ;;		Unchanged: 0/0
+  1001 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1002 ;;      Params:         1       0       0       0       0       0       0       0       0
+  1003 ;;      Locals:         3       0       0       0       0       0       0       0       0
+  1004 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1005 ;;      Totals:         4       0       0       0       0       0       0       0       0
+  1006 ;;Total ram usage:        4 bytes
+  1007 ;; Hardware stack levels used: 1
+  1008 ;; This function calls:
+  1009 ;;		Nothing
+  1010 ;; This function is called by:
+  1011 ;;		_EscribeLCD_n8
+  1012 ;; This function uses a non-reentrant model
+  1013 ;;
+  1014                           
+  1015                           	psect	text7
+  1016  000AB0                     __ptext7:
+  1017                           	callstack 0
+  1018  000AB0                     ___lbdiv:
+  1019                           	callstack 29
+  1020                           
+  1021                           ;incstack = 0
+  1022                           ;___lbdiv@dividend stored from wreg
+  1023  000AB0  6E06               	movwf	___lbdiv@dividend^0,c
+  1024  000AB2  0E00               	movlw	0
+  1025  000AB4  6E08               	movwf	___lbdiv@quotient^0,c
+  1026  000AB6  5005               	movf	___lbdiv@divisor^0,w,c
+  1027  000AB8  B4D8               	btfsc	status,2,c
+  1028  000ABA  D015               	goto	l1132
+  1029  000ABC  0E01               	movlw	1
+  1030  000ABE  6E07               	movwf	___lbdiv@counter^0,c
+  1031  000AC0  D003               	goto	l1120
+  1032  000AC2                     l1116:
+  1033  000AC2  90D8               	bcf	status,0,c
+  1034  000AC4  3605               	rlcf	___lbdiv@divisor^0,f,c
+  1035  000AC6  2A07               	incf	___lbdiv@counter^0,f,c
+  1036  000AC8                     l1120:
+  1037  000AC8  AE05               	btfss	___lbdiv@divisor^0,7,c
+  1038  000ACA  D7FB               	goto	l1116
+  1039  000ACC                     u150:
+  1040  000ACC  90D8               	bcf	status,0,c
+  1041  000ACE  3608               	rlcf	___lbdiv@quotient^0,f,c
+  1042  000AD0  5005               	movf	___lbdiv@divisor^0,w,c
+  1043  000AD2  5C06               	subwf	___lbdiv@dividend^0,w,c
+  1044  000AD4  A0D8               	btfss	status,0,c
+  1045  000AD6  D003               	goto	l1128
+  1046  000AD8  5005               	movf	___lbdiv@divisor^0,w,c
+  1047  000ADA  5E06               	subwf	___lbdiv@dividend^0,f,c
+  1048  000ADC  8008               	bsf	___lbdiv@quotient^0,0,c
+  1049  000ADE                     l1128:
+  1050  000ADE  90D8               	bcf	status,0,c
+  1051  000AE0  3205               	rrcf	___lbdiv@divisor^0,f,c
+  1052  000AE2  2E07               	decfsz	___lbdiv@counter^0,f,c
+  1053  000AE4  D7F3               	goto	u150
+  1054  000AE6                     l1132:
+  1055  000AE6  5008               	movf	___lbdiv@quotient^0,w,c
+  1056  000AE8  0012               	return		;funcret
+  1057  000AEA                     __end_of___lbdiv:
+  1058                           	callstack 0
+  1059                           
+  1060 ;; *************** function _DireccionaLCD *****************
+  1061 ;; Defined at:
+  1062 ;;		line 241 in file "LibLCDXC8.h"
+  1063 ;; Parameters:    Size  Location     Type
+  1064 ;;  a               1    wreg     unsigned char 
+  1065 ;; Auto vars:     Size  Location     Type
+  1066 ;;  a               1    4[COMRAM] unsigned char 
+  1067 ;; Return value:  Size  Location     Type
+  1068 ;;                  1    wreg      void 
+  1069 ;; Registers used:
+  1070 ;;		wreg, status,2, status,0, cstack
+  1071 ;; Tracked objects:
+  1072 ;;		On entry : 0/0
+  1073 ;;		On exit  : 0/0
+  1074 ;;		Unchanged: 0/0
+  1075 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1076 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1077 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1078 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1079 ;;      Totals:         1       0       0       0       0       0       0       0       0
+  1080 ;;Total ram usage:        1 bytes
+  1081 ;; Hardware stack levels used: 1
+  1082 ;; Hardware stack levels required when called: 2
+  1083 ;; This function calls:
+  1084 ;;		_EnviaDato
+  1085 ;;		_HabilitaLCD
+  1086 ;;		_RetardoLCD
+  1087 ;; This function is called by:
+  1088 ;;		_main
+  1089 ;; This function uses a non-reentrant model
+  1090 ;;
+  1091                           
+  1092                           	psect	text8
+  1093  000B86                     __ptext8:
+  1094                           	callstack 0
+  1095  000B86                     _DireccionaLCD:
+  1096                           	callstack 28
+  1097                           
+  1098                           ;incstack = 0
+  1099                           ;DireccionaLCD@a stored from wreg
+  1100  000B86  6E05               	movwf	DireccionaLCD@a^0,c
+  1101                           
+  1102                           ;LibLCDXC8.h: 244: LATD2=0;
+  1103  000B88  948C               	bcf	3980,2,c	;volatile
+  1104                           
+  1105                           ;LibLCDXC8.h: 245: EnviaDato(a);
+  1106  000B8A  5005               	movf	DireccionaLCD@a^0,w,c
+  1107  000B8C  EC35  F005         	call	_EnviaDato
+  1108                           
+  1109                           ;LibLCDXC8.h: 246: HabilitaLCD();
+  1110  000B90  ECD8  F005         	call	_HabilitaLCD	;wreg free
+  1111                           
+  1112                           ;LibLCDXC8.h: 247: RetardoLCD(4);
+  1113  000B94  0E04               	movlw	4
+  1114  000B96  EC0A  F005         	call	_RetardoLCD
+  1115  000B9A  0012               	return		;funcret
+  1116  000B9C                     __end_of_DireccionaLCD:
+  1117                           	callstack 0
+  1118                           
+  1119 ;; *************** function _EnviaDato *****************
+  1120 ;; Defined at:
+  1121 ;;		line 59 in file "LibLCDXC8.h"
+  1122 ;; Parameters:    Size  Location     Type
+  1123 ;;  a               1    wreg     unsigned char 
+  1124 ;; Auto vars:     Size  Location     Type
+  1125 ;;  a               1    3[COMRAM] unsigned char 
+  1126 ;; Return value:  Size  Location     Type
+  1127 ;;                  1    wreg      void 
+  1128 ;; Registers used:
+  1129 ;;		wreg, status,2, status,0, cstack
+  1130 ;; Tracked objects:
+  1131 ;;		On entry : 0/0
+  1132 ;;		On exit  : 0/0
+  1133 ;;		Unchanged: 0/0
+  1134 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1135 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1136 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1137 ;;      Temps:          1       0       0       0       0       0       0       0       0
+  1138 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  1139 ;;Total ram usage:        2 bytes
+  1140 ;; Hardware stack levels used: 1
+  1141 ;; Hardware stack levels required when called: 1
+  1142 ;; This function calls:
+  1143 ;;		_HabilitaLCD
+  1144 ;;		_RetardoLCD
+  1145 ;; This function is called by:
+  1146 ;;		_InicializaLCD
+  1147 ;;		_BorraLCD
+  1148 ;;		_EscribeLCD_c
+  1149 ;;		_EscribeLCD_n8
+  1150 ;;		_DireccionaLCD
+  1151 ;; This function uses a non-reentrant model
+  1152 ;;
+  1153                           
+  1154                           	psect	text9
+  1155  000A6A                     __ptext9:
+  1156                           	callstack 0
+  1157  000A6A                     _EnviaDato:
+  1158                           	callstack 27
+  1159                           
+  1160                           ;incstack = 0
+  1161                           ;EnviaDato@a stored from wreg
+  1162  000A6A  6E04               	movwf	EnviaDato@a^0,c
+  1163                           
+  1164                           ;LibLCDXC8.h: 60: if(interfaz==4){
+  1165  000A6C  0E04               	movlw	4
+  1166  000A6E  1810               	xorwf	_interfaz^0,w,c
+  1167  000A70  A4D8               	btfss	status,2,c
+  1168  000A72  D017               	goto	l902
+  1169                           
+  1170                           ;LibLCDXC8.h: 61: LATD=(LATD & 0b00001111) | (a & 0b11110000);
+  1171  000A74  C004  F003         	movff	EnviaDato@a,??_EnviaDato
+  1172  000A78  0EF0               	movlw	240
+  1173  000A7A  1603               	andwf	??_EnviaDato^0,f,c
+  1174  000A7C  508C               	movf	140,w,c	;volatile
+  1175  000A7E  0B0F               	andlw	15
+  1176  000A80  1003               	iorwf	??_EnviaDato^0,w,c
+  1177  000A82  6E8C               	movwf	140,c	;volatile
+  1178                           
+  1179                           ;LibLCDXC8.h: 62: HabilitaLCD();
+  1180  000A84  ECD8  F005         	call	_HabilitaLCD	;wreg free
+  1181                           
+  1182                           ;LibLCDXC8.h: 63: RetardoLCD(1);
+  1183  000A88  0E01               	movlw	1
+  1184  000A8A  EC0A  F005         	call	_RetardoLCD
+  1185                           
+  1186                           ;LibLCDXC8.h: 64: LATD=(LATD & 0b00001111) | (a<<4);
+  1187  000A8E  C004  F003         	movff	EnviaDato@a,??_EnviaDato
+  1188  000A92  3A03               	swapf	??_EnviaDato^0,f,c
+  1189  000A94  0EF0               	movlw	240
+  1190  000A96  1603               	andwf	??_EnviaDato^0,f,c
+  1191  000A98  508C               	movf	140,w,c	;volatile
+  1192  000A9A  0B0F               	andlw	15
+  1193  000A9C  1003               	iorwf	??_EnviaDato^0,w,c
+  1194  000A9E  6E8C               	movwf	140,c	;volatile
+  1195                           
+  1196                           ;LibLCDXC8.h: 67: }else if(interfaz==8){
+  1197  000AA0  0012               	return	
+  1198  000AA2                     l902:
+  1199  000AA2  0E08               	movlw	8
+  1200  000AA4  1810               	xorwf	_interfaz^0,w,c
+  1201  000AA6  A4D8               	btfss	status,2,c
+  1202  000AA8  0012               	return	
+  1203                           
+  1204                           ;LibLCDXC8.h: 68: LATD=a;
+  1205  000AAA  C004  FF8C         	movff	EnviaDato@a,3980	;volatile
+  1206  000AAE  0012               	return		;funcret
+  1207  000AB0                     __end_of_EnviaDato:
+  1208                           	callstack 0
+  1209                           
+  1210 ;; *************** function _RetardoLCD *****************
+  1211 ;; Defined at:
+  1212 ;;		line 277 in file "LibLCDXC8.h"
+  1213 ;; Parameters:    Size  Location     Type
+  1214 ;;  a               1    wreg     unsigned char 
+  1215 ;; Auto vars:     Size  Location     Type
+  1216 ;;  a               1    1[COMRAM] unsigned char 
+  1217 ;; Return value:  Size  Location     Type
+  1218 ;;                  1    wreg      void 
+  1219 ;; Registers used:
+  1220 ;;		wreg, status,2, status,0
+  1221 ;; Tracked objects:
+  1222 ;;		On entry : 0/0
+  1223 ;;		On exit  : 0/0
+  1224 ;;		Unchanged: 0/0
+  1225 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1226 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1227 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1228 ;;      Temps:          1       0       0       0       0       0       0       0       0
+  1229 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  1230 ;;Total ram usage:        2 bytes
+  1231 ;; Hardware stack levels used: 1
+  1232 ;; This function calls:
+  1233 ;;		Nothing
+  1234 ;; This function is called by:
+  1235 ;;		_EnviaDato
+  1236 ;;		_InicializaLCD
+  1237 ;;		_BorraLCD
+  1238 ;;		_EscribeLCD_c
+  1239 ;;		_EscribeLCD_n8
+  1240 ;;		_DireccionaLCD
+  1241 ;; This function uses a non-reentrant model
+  1242 ;;
+  1243                           
+  1244                           	psect	text10
+  1245  000A14                     __ptext10:
+  1246                           	callstack 0
+  1247  000A14                     _RetardoLCD:
+  1248                           	callstack 28
+  1249                           
+  1250                           ;incstack = 0
+  1251                           ;RetardoLCD@a stored from wreg
+  1252  000A14  6E02               	movwf	RetardoLCD@a^0,c
+  1253                           
+  1254                           ;LibLCDXC8.h: 278: switch(a){
+  1255  000A16  D01B               	goto	l890
+  1256  000A18                     l880:
+  1257  000A18  0E05               	movlw	5
+  1258  000A1A  6E01               	movwf	??_RetardoLCD^0,c
+  1259  000A1C  0EDE               	movlw	222
+  1260  000A1E                     u207:
+  1261  000A1E  2EE8               	decfsz	wreg,f,c
+  1262  000A20  D7FE               	bra	u207
+  1263  000A22  2E01               	decfsz	??_RetardoLCD^0,f,c
+  1264  000A24  D7FC               	bra	u207
+  1265                           
+  1266                           ;LibLCDXC8.h: 281: break;
+  1267  000A26  0012               	return	
+  1268  000A28                     l882:
+  1269  000A28  0E53               	movlw	83
+  1270  000A2A                     u217:
+  1271  000A2A  2EE8               	decfsz	wreg,f,c
+  1272  000A2C  D7FE               	bra	u217
+  1273  000A2E  F000               	nop	
+  1274                           
+  1275                           ;LibLCDXC8.h: 283: _delay((unsigned long)((640)*(1000000/4000000.0)));
+  1276  000A30  0E35               	movlw	53
+  1277  000A32                     u227:
+  1278  000A32  2EE8               	decfsz	wreg,f,c
+  1279  000A34  D7FE               	bra	u227
+  1280  000A36  F000               	nop	
+  1281                           
+  1282                           ;LibLCDXC8.h: 285: break;
+  1283  000A38  0012               	return	
+  1284  000A3A                     l884:
+  1285  000A3A  0E08               	movlw	8
+  1286  000A3C                     u237:
+  1287  000A3C  2EE8               	decfsz	wreg,f,c
+  1288  000A3E  D7FE               	bra	u237
+  1289  000A40  F000               	nop	
+  1290                           
+  1291                           ;LibLCDXC8.h: 288: break;
+  1292  000A42  0012               	return	
+  1293  000A44                     l886:
+  1294  000A44  0E03               	movlw	3
+  1295  000A46                     u247:
+  1296  000A46  2EE8               	decfsz	wreg,f,c
+  1297  000A48  D7FE               	bra	u247
+  1298  000A4A  F000               	nop	
+  1299                           
+  1300                           ;LibLCDXC8.h: 291: break;
+  1301  000A4C  0012               	return	
+  1302  000A4E                     l890:
+  1303  000A4E  5002               	movf	RetardoLCD@a^0,w,c
+  1304                           
+  1305                           ; Switch size 1, requested type "simple"
+  1306                           ; Number of cases is 4, Range of values is 1 to 4
+  1307                           ; switch strategies available:
+  1308                           ; Name         Instructions Cycles
+  1309                           ; simple_byte           13     7 (average)
+  1310                           ;	Chosen strategy is simple_byte
+  1311  000A50  0A01               	xorlw	1	; case 1
+  1312  000A52  B4D8               	btfsc	status,2,c
+  1313  000A54  D7E1               	goto	l880
+  1314  000A56  0A03               	xorlw	3	; case 2
+  1315  000A58  B4D8               	btfsc	status,2,c
+  1316  000A5A  D7E6               	goto	l882
+  1317  000A5C  0A01               	xorlw	1	; case 3
+  1318  000A5E  B4D8               	btfsc	status,2,c
+  1319  000A60  D7EC               	goto	l884
+  1320  000A62  0A07               	xorlw	7	; case 4
+  1321  000A64  A4D8               	btfss	status,2,c
+  1322  000A66  0012               	return	
+  1323  000A68  D7ED               	goto	l886
+  1324  000A6A                     __end_of_RetardoLCD:
+  1325                           	callstack 0
+  1326                           
+  1327 ;; *************** function _HabilitaLCD *****************
+  1328 ;; Defined at:
+  1329 ;;		line 105 in file "LibLCDXC8.h"
+  1330 ;; Parameters:    Size  Location     Type
+  1331 ;;		None
+  1332 ;; Auto vars:     Size  Location     Type
+  1333 ;;		None
+  1334 ;; Return value:  Size  Location     Type
+  1335 ;;                  1    wreg      void 
+  1336 ;; Registers used:
+  1337 ;;		wreg
+  1338 ;; Tracked objects:
+  1339 ;;		On entry : 0/0
+  1340 ;;		On exit  : 0/0
+  1341 ;;		Unchanged: 0/0
+  1342 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1343 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1344 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1345 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1346 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1347 ;;Total ram usage:        0 bytes
+  1348 ;; Hardware stack levels used: 1
+  1349 ;; This function calls:
+  1350 ;;		Nothing
+  1351 ;; This function is called by:
+  1352 ;;		_EnviaDato
+  1353 ;;		_InicializaLCD
+  1354 ;;		_BorraLCD
+  1355 ;;		_EscribeLCD_c
+  1356 ;;		_EscribeLCD_n8
+  1357 ;;		_DireccionaLCD
+  1358 ;; This function uses a non-reentrant model
+  1359 ;;
+  1360                           
+  1361                           	psect	text11
+  1362  000BB0                     __ptext11:
+  1363                           	callstack 0
+  1364  000BB0                     _HabilitaLCD:
+  1365                           	callstack 28
+  1366                           
+  1367                           ;LibLCDXC8.h: 107: LATD3=1;
+  1368                           
+  1369                           ;incstack = 0
+  1370  000BB0  868C               	bsf	3980,3,c	;volatile
+  1371                           
+  1372                           ;LibLCDXC8.h: 108: _delay((unsigned long)((40)*(1000000/4000000.0)));
+  1373  000BB2  0E03               	movlw	3
+  1374  000BB4                     u257:
+  1375  000BB4  2EE8               	decfsz	wreg,f,c
+  1376  000BB6  D7FE               	bra	u257
+  1377  000BB8  F000               	nop	
+  1378                           
+  1379                           ;LibLCDXC8.h: 110: LATD3=0;
+  1380  000BBA  968C               	bcf	3980,3,c	;volatile
+  1381  000BBC  0012               	return		;funcret
+  1382  000BBE                     __end_of_HabilitaLCD:
+  1383                           	callstack 0
+  1384                           
+  1385 ;; *************** function _ConfiguraLCD *****************
+  1386 ;; Defined at:
+  1387 ;;		line 55 in file "LibLCDXC8.h"
+  1388 ;; Parameters:    Size  Location     Type
+  1389 ;;  a               1    wreg     unsigned char 
+  1390 ;; Auto vars:     Size  Location     Type
+  1391 ;;  a               1    0[COMRAM] unsigned char 
+  1392 ;; Return value:  Size  Location     Type
+  1393 ;;                  1    wreg      void 
+  1394 ;; Registers used:
+  1395 ;;		wreg, status,2, status,0
+  1396 ;; Tracked objects:
+  1397 ;;		On entry : 0/0
+  1398 ;;		On exit  : 0/0
+  1399 ;;		Unchanged: 0/0
+  1400 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1401 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1402 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1403 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1404 ;;      Totals:         1       0       0       0       0       0       0       0       0
+  1405 ;;Total ram usage:        1 bytes
+  1406 ;; Hardware stack levels used: 1
+  1407 ;; This function calls:
+  1408 ;;		Nothing
+  1409 ;; This function is called by:
+  1410 ;;		_main
+  1411 ;; This function uses a non-reentrant model
+  1412 ;;
+  1413                           
+  1414                           	psect	text12
+  1415  000B58                     __ptext12:
+  1416                           	callstack 0
+  1417  000B58                     _ConfiguraLCD:
+  1418                           	callstack 30
+  1419                           
+  1420                           ;incstack = 0
+  1421                           ;ConfiguraLCD@a stored from wreg
+  1422  000B58  6E01               	movwf	ConfiguraLCD@a^0,c
+  1423                           
+  1424                           ;LibLCDXC8.h: 56: if(a==4 | a ==8)
+  1425  000B5A  0E04               	movlw	4
+  1426  000B5C  1801               	xorwf	ConfiguraLCD@a^0,w,c
+  1427  000B5E  B4D8               	btfsc	status,2,c
+  1428  000B60  D004               	goto	u80
+  1429  000B62  0E08               	movlw	8
+  1430  000B64  1801               	xorwf	ConfiguraLCD@a^0,w,c
+  1431  000B66  A4D8               	btfss	status,2,c
+  1432  000B68  0012               	return	
+  1433  000B6A                     u80:
+  1434                           
+  1435                           ;LibLCDXC8.h: 57: interfaz=a;
+  1436  000B6A  C001  F010         	movff	ConfiguraLCD@a,_interfaz
+  1437  000B6E  0012               	return		;funcret
+  1438  000B70                     __end_of_ConfiguraLCD:
+  1439                           	callstack 0
+  1440                           
+  1441                           	psect	rparam
+  1442  0000                     
+  1443                           	psect	idloc
+  1444                           
+  1445                           ;Config register IDLOC0 @ 0x200000
+  1446                           ;	unspecified, using default values
+  1447  200000                     	org	2097152
+  1448  200000  FF                 	db	255
+  1449                           
+  1450                           ;Config register IDLOC1 @ 0x200001
+  1451                           ;	unspecified, using default values
+  1452  200001                     	org	2097153
+  1453  200001  FF                 	db	255
+  1454                           
+  1455                           ;Config register IDLOC2 @ 0x200002
+  1456                           ;	unspecified, using default values
+  1457  200002                     	org	2097154
+  1458  200002  FF                 	db	255
+  1459                           
+  1460                           ;Config register IDLOC3 @ 0x200003
+  1461                           ;	unspecified, using default values
+  1462  200003                     	org	2097155
+  1463  200003  FF                 	db	255
+  1464                           
+  1465                           ;Config register IDLOC4 @ 0x200004
+  1466                           ;	unspecified, using default values
+  1467  200004                     	org	2097156
+  1468  200004  FF                 	db	255
+  1469                           
+  1470                           ;Config register IDLOC5 @ 0x200005
+  1471                           ;	unspecified, using default values
+  1472  200005                     	org	2097157
+  1473  200005  FF                 	db	255
+  1474                           
+  1475                           ;Config register IDLOC6 @ 0x200006
+  1476                           ;	unspecified, using default values
+  1477  200006                     	org	2097158
+  1478  200006  FF                 	db	255
+  1479                           
+  1480                           ;Config register IDLOC7 @ 0x200007
+  1481                           ;	unspecified, using default values
+  1482  200007                     	org	2097159
+  1483  200007  FF                 	db	255
+  1484                           
+  1485                           	psect	config
+  1486                           
+  1487                           ;Config register CONFIG1L @ 0x300000
+  1488                           ;	unspecified, using default values
+  1489                           ;	PLL Prescaler Selection bits
+  1490                           ;	PLLDIV = 0x0, unprogrammed default
+  1491                           ;	System Clock Postscaler Selection bits
+  1492                           ;	CPUDIV = 0x0, unprogrammed default
+  1493                           ;	USB Clock Selection bit (used in Full-Speed USB mode only; UCFG:FSEN = 1)
+  1494                           ;	USBDIV = 0x0, unprogrammed default
+  1495  300000                     	org	3145728
+  1496  300000  00                 	db	0
+  1497                           
+  1498                           ;Config register CONFIG1H @ 0x300001
+  1499                           ;	Oscillator Selection bits
+  1500                           ;	FOSC = INTOSC_EC, Internal oscillator, CLKO function on RA6, EC used by USB (INTCKO)
+  1501                           ;	Fail-Safe Clock Monitor Enable bit
+  1502                           ;	FCMEN = 0x0, unprogrammed default
+  1503                           ;	Internal/External Oscillator Switchover bit
+  1504                           ;	IESO = 0x0, unprogrammed default
+  1505  300001                     	org	3145729
+  1506  300001  09                 	db	9
+  1507                           
+  1508                           ;Config register CONFIG2L @ 0x300002
+  1509                           ;	unspecified, using default values
+  1510                           ;	Power-up Timer Enable bit
+  1511                           ;	PWRT = 0x1, unprogrammed default
+  1512                           ;	Brown-out Reset Enable bits
+  1513                           ;	BOR = 0x3, unprogrammed default
+  1514                           ;	Brown-out Reset Voltage bits
+  1515                           ;	BORV = 0x3, unprogrammed default
+  1516                           ;	USB Voltage Regulator Enable bit
+  1517                           ;	VREGEN = 0x0, unprogrammed default
+  1518  300002                     	org	3145730
+  1519  300002  1F                 	db	31
+  1520                           
+  1521                           ;Config register CONFIG2H @ 0x300003
+  1522                           ;	Watchdog Timer Enable bit
+  1523                           ;	WDT = OFF, WDT disabled (control is placed on the SWDTEN bit)
+  1524                           ;	Watchdog Timer Postscale Select bits
+  1525                           ;	WDTPS = 0xF, unprogrammed default
+  1526  300003                     	org	3145731
+  1527  300003  1E                 	db	30
+  1528                           
+  1529                           ; Padding undefined space
+  1530  300004                     	org	3145732
+  1531  300004  FF                 	db	255
+  1532                           
+  1533                           ;Config register CONFIG3H @ 0x300005
+  1534                           ;	unspecified, using default values
+  1535                           ;	CCP2 MUX bit
+  1536                           ;	CCP2MX = 0x1, unprogrammed default
+  1537                           ;	PORTB A/D Enable bit
+  1538                           ;	PBADEN = 0x1, unprogrammed default
+  1539                           ;	Low-Power Timer 1 Oscillator Enable bit
+  1540                           ;	LPT1OSC = 0x0, unprogrammed default
+  1541                           ;	MCLR Pin Enable bit
+  1542                           ;	MCLRE = 0x1, unprogrammed default
+  1543  300005                     	org	3145733
+  1544  300005  83                 	db	131
+  1545                           
+  1546                           ;Config register CONFIG4L @ 0x300006
+  1547                           ;	unspecified, using default values
+  1548                           ;	Stack Full/Underflow Reset Enable bit
+  1549                           ;	STVREN = 0x1, unprogrammed default
+  1550                           ;	Single-Supply ICSP Enable bit
+  1551                           ;	LVP = 0x1, unprogrammed default
+  1552                           ;	Dedicated In-Circuit Debug/Programming Port (ICPORT) Enable bit
+  1553                           ;	ICPRT = 0x0, unprogrammed default
+  1554                           ;	Extended Instruction Set Enable bit
+  1555                           ;	XINST = 0x0, unprogrammed default
+  1556                           ;	Background Debugger Enable bit
+  1557                           ;	DEBUG = 0x1, unprogrammed default
+  1558  300006                     	org	3145734
+  1559  300006  85                 	db	133
+  1560                           
+  1561                           ; Padding undefined space
+  1562  300007                     	org	3145735
+  1563  300007  FF                 	db	255
+  1564                           
+  1565                           ;Config register CONFIG5L @ 0x300008
+  1566                           ;	unspecified, using default values
+  1567                           ;	Code Protection bit
+  1568                           ;	CP0 = 0x1, unprogrammed default
+  1569                           ;	Code Protection bit
+  1570                           ;	CP1 = 0x1, unprogrammed default
+  1571                           ;	Code Protection bit
+  1572                           ;	CP2 = 0x1, unprogrammed default
+  1573                           ;	Code Protection bit
+  1574                           ;	CP3 = 0x1, unprogrammed default
+  1575  300008                     	org	3145736
+  1576  300008  0F                 	db	15
+  1577                           
+  1578                           ;Config register CONFIG5H @ 0x300009
+  1579                           ;	unspecified, using default values
+  1580                           ;	Boot Block Code Protection bit
+  1581                           ;	CPB = 0x1, unprogrammed default
+  1582                           ;	Data EEPROM Code Protection bit
+  1583                           ;	CPD = 0x1, unprogrammed default
+  1584  300009                     	org	3145737
+  1585  300009  C0                 	db	192
+  1586                           
+  1587                           ;Config register CONFIG6L @ 0x30000A
+  1588                           ;	unspecified, using default values
+  1589                           ;	Write Protection bit
+  1590                           ;	WRT0 = 0x1, unprogrammed default
+  1591                           ;	Write Protection bit
+  1592                           ;	WRT1 = 0x1, unprogrammed default
+  1593                           ;	Write Protection bit
+  1594                           ;	WRT2 = 0x1, unprogrammed default
+  1595                           ;	Write Protection bit
+  1596                           ;	WRT3 = 0x1, unprogrammed default
+  1597  30000A                     	org	3145738
+  1598  30000A  0F                 	db	15
+  1599                           
+  1600                           ;Config register CONFIG6H @ 0x30000B
+  1601                           ;	unspecified, using default values
+  1602                           ;	Configuration Register Write Protection bit
+  1603                           ;	WRTC = 0x1, unprogrammed default
+  1604                           ;	Boot Block Write Protection bit
+  1605                           ;	WRTB = 0x1, unprogrammed default
+  1606                           ;	Data EEPROM Write Protection bit
+  1607                           ;	WRTD = 0x1, unprogrammed default
+  1608  30000B                     	org	3145739
+  1609  30000B  E0                 	db	224
+  1610                           
+  1611                           ;Config register CONFIG7L @ 0x30000C
+  1612                           ;	unspecified, using default values
+  1613                           ;	Table Read Protection bit
+  1614                           ;	EBTR0 = 0x1, unprogrammed default
+  1615                           ;	Table Read Protection bit
+  1616                           ;	EBTR1 = 0x1, unprogrammed default
+  1617                           ;	Table Read Protection bit
+  1618                           ;	EBTR2 = 0x1, unprogrammed default
+  1619                           ;	Table Read Protection bit
+  1620                           ;	EBTR3 = 0x1, unprogrammed default
+  1621  30000C                     	org	3145740
+  1622  30000C  0F                 	db	15
+  1623                           
+  1624                           ;Config register CONFIG7H @ 0x30000D
+  1625                           ;	unspecified, using default values
+  1626                           ;	Boot Block Table Read Protection bit
+  1627                           ;	EBTRB = 0x1, unprogrammed default
+  1628  30000D                     	org	3145741
+  1629  30000D  40                 	db	64
+  1630                           tosu	equ	0xFFF
+  1631                           tosh	equ	0xFFE
+  1632                           tosl	equ	0xFFD
+  1633                           stkptr	equ	0xFFC
+  1634                           pclatu	equ	0xFFB
+  1635                           pclath	equ	0xFFA
+  1636                           pcl	equ	0xFF9
+  1637                           tblptru	equ	0xFF8
+  1638                           tblptrh	equ	0xFF7
+  1639                           tblptrl	equ	0xFF6
+  1640                           tablat	equ	0xFF5
+  1641                           prodh	equ	0xFF4
+  1642                           prodl	equ	0xFF3
+  1643                           indf0	equ	0xFEF
+  1644                           postinc0	equ	0xFEE
+  1645                           postdec0	equ	0xFED
+  1646                           preinc0	equ	0xFEC
+  1647                           plusw0	equ	0xFEB
+  1648                           fsr0h	equ	0xFEA
+  1649                           fsr0l	equ	0xFE9
+  1650                           wreg	equ	0xFE8
+  1651                           indf1	equ	0xFE7
+  1652                           postinc1	equ	0xFE6
+  1653                           postdec1	equ	0xFE5
+  1654                           preinc1	equ	0xFE4
+  1655                           plusw1	equ	0xFE3
+  1656                           fsr1h	equ	0xFE2
+  1657                           fsr1l	equ	0xFE1
+  1658                           bsr	equ	0xFE0
+  1659                           indf2	equ	0xFDF
+  1660                           postinc2	equ	0xFDE
+  1661                           postdec2	equ	0xFDD
+  1662                           preinc2	equ	0xFDC
+  1663                           plusw2	equ	0xFDB
+  1664                           fsr2h	equ	0xFDA
+  1665                           fsr2l	equ	0xFD9
+  1666                           status	equ	0xFD8
+
+Data Sizes:
+    Strings     12
+    Constant    0
+    Data        1
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     15      16
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    MensajeLCD_Var@a	PTR unsigned char  size(1) Largest target is 12
+		 -> STR_1(CODE[12]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_EscribeLCD_n8
+    _MensajeLCD_Var->_EscribeLCD_c
+    _EscribeLCD_c->_EnviaDato
+    _InicializaLCD->_EnviaDato
+    _BorraLCD->_EnviaDato
+    _EscribeLCD_n8->___lbdiv
+    ___lbdiv->___lbmod
+    _DireccionaLCD->_EnviaDato
+    _EnviaDato->_RetardoLCD
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    1958
+                                             13 COMRAM     2     2      0
+                       _ConfiguraLCD
+                      _DireccionaLCD
+                       _EscribeLCD_c
+                      _EscribeLCD_n8
+                      _InicializaLCD
+                     _MensajeLCD_Var
+ ---------------------------------------------------------------------------------
+ (1) _MensajeLCD_Var                                       1     0      1     211
+                                              5 COMRAM     1     0      1
+                       _EscribeLCD_c
+ ---------------------------------------------------------------------------------
+ (2) _EscribeLCD_c                                         1     1      0      90
+                                              4 COMRAM     1     1      0
+                          _EnviaDato
+                        _HabilitaLCD
+                         _RetardoLCD
+ ---------------------------------------------------------------------------------
+ (1) _InicializaLCD                                        0     0      0     150
+                           _BorraLCD
+                          _EnviaDato
+                        _HabilitaLCD
+                         _RetardoLCD
+ ---------------------------------------------------------------------------------
+ (2) _BorraLCD                                             0     0      0      75
+                          _EnviaDato
+                        _HabilitaLCD
+                         _RetardoLCD
+ ---------------------------------------------------------------------------------
+ (1) _EscribeLCD_n8                                        5     4      1    1372
+                                              8 COMRAM     5     4      1
+                          _EnviaDato
+                        _HabilitaLCD
+                         _RetardoLCD
+                            ___lbdiv
+                            ___lbmod
+ ---------------------------------------------------------------------------------
+ (2) ___lbmod                                              4     3      1     539
+                                              0 COMRAM     4     3      1
+ ---------------------------------------------------------------------------------
+ (2) ___lbdiv                                              4     3      1     390
+                                              4 COMRAM     4     3      1
+                            ___lbmod (ARG)
+ ---------------------------------------------------------------------------------
+ (1) _DireccionaLCD                                        1     1      0      90
+                                              4 COMRAM     1     1      0
+                          _EnviaDato
+                        _HabilitaLCD
+                         _RetardoLCD
+ ---------------------------------------------------------------------------------
+ (3) _EnviaDato                                            2     2      0      60
+                                              2 COMRAM     2     2      0
+                        _HabilitaLCD
+                         _RetardoLCD
+ ---------------------------------------------------------------------------------
+ (3) _RetardoLCD                                           2     2      0      15
+                                              0 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ (3) _HabilitaLCD                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _ConfiguraLCD                                         1     1      0      45
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _ConfiguraLCD
+   _DireccionaLCD
+     _EnviaDato
+       _HabilitaLCD
+       _RetardoLCD
+     _HabilitaLCD
+     _RetardoLCD
+   _EscribeLCD_c
+     _EnviaDato
+     _HabilitaLCD
+     _RetardoLCD
+   _EscribeLCD_n8
+     _EnviaDato
+     _HabilitaLCD
+     _RetardoLCD
+     ___lbdiv
+       ___lbmod (ARG)
+     ___lbmod
+   _InicializaLCD
+     _BorraLCD
+       _EnviaDato
+       _HabilitaLCD
+       _RetardoLCD
+     _EnviaDato
+     _HabilitaLCD
+     _RetardoLCD
+   _MensajeLCD_Var
+     _EscribeLCD_c
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             7FF      0       0      21        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      F      10       1       16.8%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      10      20        0.0%
+DATA                 0      0      10       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.32 build 20210201212658 
+Symbol Table                                                                                   Wed Nov 24 16:00:55 2021
+
+                     u80 0B6A               EnviaDato@a 0004                      l121 0A12  
+          _InicializaLCD 08F4                      l902 0AA2                      l880 0A18  
+                    l882 0A28                      l890 0A4E                      l884 0A3A  
+                    l886 0A44                      l974 0906                      l984 0924  
+                    l994 0942                      u150 0ACC                      u207 0A1E  
+                    u217 0A2A                      u227 0A32                      u237 0A3C  
+                    u247 0A46                      u257 0BB4                      u197 09A2  
+                    wreg 000FE8                     l1014 097A                     l1120 0AC8  
+                   l1116 0AC2                     l1132 0AE6                     l1128 0ADE  
+                   l1160 0834                     l1146 0B0C                     l1138 0AF4  
+                   l1170 087A                     l1154 0814                     l1190 0B16  
+                   l1186 08DE                     l1194 0B28                     STR_1 0801  
+                   _LATD 000F8C           ??_EscribeLCD_c 0005                     _main 0990  
+                   start 0000             ___param_bank 000000           ?_InicializaLCD 0001  
+                  ?_main 0001          __end_of___lbdiv 0AEA            EscribeLCD_c@a 0005  
+        __end_of___lbmod 0B14                    _LATD2 007C62                    _LATD3 007C63  
+                  _TRISD 000F95          ??_EscribeLCD_n8 000A  __size_of_MensajeLCD_Var 0028  
+                  tablat 000FF5              _HabilitaLCD 0BB0                    status 000FD8  
+        ___lbdiv@divisor 0005          ___lbdiv@counter 0007         __end_of_BorraLCD 0BB0  
+        __initialization 0B3C             __end_of_main 0A14                   ??_main 000E  
+   __end_of_ConfiguraLCD 0B70            __activetblptr 000002           DireccionaLCD@a 0005  
+         EscribeLCD_n8@a 000D           EscribeLCD_n8@b 0009       __size_of_EnviaDato 0046  
+  __end_of_DireccionaLCD 0B9C               _RetardoLCD 0A14     EscribeLCD_n8@centena 000A  
+              ??___lbdiv 0006                ??___lbmod 0002          ??_InicializaLCD 0005  
+                 isa$std 000001     __end_of_EscribeLCD_c 0B86             __pdataCOMRAM 0010  
+           __mediumconst 0000                   tblptrh 000FF7                   tblptrl 000FF6  
+                 tblptru 000FF8         ___lbdiv@dividend 0006          ___lbmod@divisor 0001  
+             __accesstop 0060  __end_of__initialization 0B4E          ___lbmod@counter 0003  
+          ___rparam_used 000001           __pcstackCOMRAM 0001        __end_of_EnviaDato 0AB0  
+       ___lbdiv@quotient 0008                ?_BorraLCD 0001           _MensajeLCD_Var 0B14  
+        MensajeLCD_Var@a 0006              ?_RetardoLCD 0001              RetardoLCD@a 0002  
+  __size_of_ConfiguraLCD 0018   __end_of_MensajeLCD_Var 0B3C               ??_BorraLCD 0005  
+           ?_HabilitaLCD 0001             _ConfiguraLCD 0B58                  __Hparam 0000  
+                __Lparam 0000    __size_of_EscribeLCD_c 0016                  ___lbdiv 0AB0  
+                ___lbmod 0AEA             __psmallconst 0800                  __pcinit 0B3C  
+                __ramtop 0800                  __ptext0 0990                  __ptext1 0B14  
+                __ptext2 0B70                  __ptext3 08F4                  __ptext4 0B9C  
+                __ptext5 080E                  __ptext6 0AEA                  __ptext7 0AB0  
+                __ptext8 0B86                  __ptext9 0A6A      __size_of_RetardoLCD 0056  
+        ?_MensajeLCD_Var 0006    __end_of_EscribeLCD_n8 08F4     end_of_initialization 0B4E  
+          __Lmediumconst 0000             _EscribeLCD_c 0B70         ___lbmod@dividend 0002  
+            ___lbmod@rem 0004            __pidataCOMRAM 0BBE    __end_of_InicializaLCD 0990  
+              _EnviaDato 0A6A   __size_of_DireccionaLCD 0016      start_initialization 0B3C  
+      __size_of_BorraLCD 0014             ??_RetardoLCD 0001     __size_of_HabilitaLCD 000E  
+    EscribeLCD_n8@decena 000B      EscribeLCD_n8@unidad 000C               ?_EnviaDato 0001  
+     __end_of_RetardoLCD 0A6A            _DireccionaLCD 0B86                 ?___lbdiv 0005  
+               ?___lbmod 0001         ??_MensajeLCD_Var 0007              __smallconst 0800  
+         ?_DireccionaLCD 0001              ??_EnviaDato 0003                 _BorraLCD 0B9C  
+               __Hrparam 0000                 __Lrparam 0000   __size_of_EscribeLCD_n8 00E6  
+       __size_of___lbdiv 003A         __size_of___lbmod 002A            ConfiguraLCD@a 0001  
+               __ptext10 0A14                 __ptext11 0BB0                 __ptext12 0B58  
+        ??_DireccionaLCD 0005            __size_of_main 0084                 _interfaz 0010  
+               isa$xinst 000000            _EscribeLCD_n8 080E            ??_HabilitaLCD 0001  
+          ?_ConfiguraLCD 0001   __size_of_InicializaLCD 009C           ?_EscribeLCD_n8 0009  
+         ??_ConfiguraLCD 0001            ?_EscribeLCD_c 0001      __end_of_HabilitaLCD 0BBE  
